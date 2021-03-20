@@ -4,11 +4,11 @@
 
 #include "QuestionFabric.h"
 
-OrdinaryQuestionFabric::Question* factoryMethod() const override {
+Question* OrdinaryQuestionFabric::factoryMethod() const override {
   return new OrdinaryQuestion();
 }
 
 
-CountryQuestionFabric::Question* factoryMethod() const override {
+Question* CountryQuestionFabric::factoryMethod() const override {
   return new CountryQuestion();
 }
