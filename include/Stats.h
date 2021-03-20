@@ -21,3 +21,11 @@ public:
     //Destructor
     ~Stats();
 };
+
+class OrdinaryClass: public Stats {
+
+};
+
+class CountryClass: public Stats {
+
+};
