@@ -5,15 +5,9 @@
 #include "QuestionFabric.h"
 
 Question* OrdinaryQuestionFabric::factoryMethod() const {
-return new
-
-OrdinaryQuestion();
-
+    return new OrdinaryQuestion();
 }
 
 Question* CountryQuestionFabric::factoryMethod() const {
-return new
-
-CountryQuestion();
-
+    return new CountryQuestion();
 }
