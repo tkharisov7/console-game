@@ -4,6 +4,8 @@
 
 #ifndef CONSOLE_GAME_QUESTION_H
 #define CONSOLE_GAME_QUESTION_H
+#include <string>
+#include <vector>
 
 class Question {
 //Fields:

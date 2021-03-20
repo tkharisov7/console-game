@@ -7,6 +7,8 @@
 
 #endif //CONSOLE_GAME_STATS_H
 
+#include <string>
+
 class Stats {
 //Fields:
 public:
@@ -15,7 +17,7 @@ public:
 //Methods:
 public:
     //Constructor
-    Stats(int);
+    Stats(int, std::string);
     //Destructor
     ~Stats();
 };
