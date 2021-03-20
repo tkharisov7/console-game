@@ -29,7 +29,7 @@ public:
     //Destructor
     ~Game();
     //Runs the game
-    void Run();
+    void run();
 
 private:
     // processes player input

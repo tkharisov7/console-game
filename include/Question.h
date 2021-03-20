@@ -24,5 +24,12 @@ public:
     ~Question();
 };
 
+class OrdinaryQuestion: public Question {
 
+};
+
+class CountryQuestion: public Question {
+public:
+    std::string nameOfCountry;
+};
 #endif //CONSOLE_GAME_QUESTION_H
