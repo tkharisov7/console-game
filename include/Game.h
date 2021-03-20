@@ -14,6 +14,8 @@
 
 // the instance of a game
 class Game {
+// Friends:
+friend class Turn;
 // Fields:
 public:
 
