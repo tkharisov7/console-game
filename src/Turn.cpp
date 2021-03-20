@@ -19,7 +19,7 @@ bool input() {
     return answer;
 }
 
-logFromRun Turn::run() {
+Turn::logFromRun Turn::run() {
     Question q;
     while (true) {
         q = getQuestion();

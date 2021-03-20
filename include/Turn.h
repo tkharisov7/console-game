@@ -29,13 +29,13 @@ public:
 
 private:
     //gets question from the pull of questions
-    void getQuestion();
+    Question getQuestion();
 
     // checks the question for correctness
     bool checker(const Question&);
 
     // takes user's answer
-    bool input(std::ifstream&);
+    bool input();
 
     //asks the question and gets an answer
     bool processQuestion(const Question&);
