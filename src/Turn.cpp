@@ -4,6 +4,7 @@
 
 #include "Turn.h"
 #include "Stats.h"
+#include <iostream>
 
 class Turn::logFromRun {
 public:
@@ -12,9 +13,9 @@ public:
     logFromRun(std::vector<Stats> impact) : impact(impact) {}
 };
 
-bool input(std::ifstream& in) {
+bool input() {
     bool answer;
-    in >> answer;
+    std::cin >> answer;
     return answer;
 }
 
@@ -26,10 +27,11 @@ logFromRun Turn::run() {
             break;
         }
     }
-
+    bool answer = processQuestion(q);
+    return answer ? q.impactOnStatsPositive : q.impactOnStatsNegative;
 }
 
-void Turn::getQuestion() {
+Question Turn::getQuestion() {
 
 }
 
@@ -37,9 +39,7 @@ bool Turn::checker(const Question& q) {
 
 }
 
-bool Turn
-
-processQuestion(const Question& q) {
+bool Turn::processQuestion(const Question& q) {
     std::cout << q.textOfQuestion << '\n';
     bool answer = input();
     return answer;

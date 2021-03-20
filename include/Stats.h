@@ -16,18 +16,19 @@ public:
     std::string nameOfStats;
 //Methods:
 public:
-    Stats();
+    Stats() = default;
     //Constructor
     Stats(int, std::string);
 
     //Destructor
-    ~Stats();
+    ~Stats() = default;
 };
 
-class OrdinaryClass : public Stats {
+class OrdinaryStats;
 
-};
+class CountryStats : public Stats {
+public:
+    std::string nameOfCountry;
 
-class CountryClass : public Stats {
-
+    CountryStats(int, std::string);
 };
