@@ -16,6 +16,7 @@ public:
     std::string nameOfStats;
 //Methods:
 public:
+    Stats();
     //Constructor
     Stats(int, std::string);
 

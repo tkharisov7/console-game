@@ -1,15 +1,11 @@
-"/Users/timur_kharisov/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=/usr/local/Cellar/gcc/10.2.0_4/bin/g++-10 -G "CodeBlocks - Unix Makefiles" /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game
--- The CXX compiler identification is GNU 10.2.0
--- Checking whether CXX compiler has -isysroot
--- Checking whether CXX compiler has -isysroot - yes
--- Checking whether CXX compiler supports OSX deployment target flag
--- Checking whether CXX compiler supports OSX deployment target flag - yes
--- Check for working CXX compiler: /usr/local/Cellar/gcc/10.2.0_4/bin/g++-10
--- Check for working CXX compiler: /usr/local/Cellar/gcc/10.2.0_4/bin/g++-10 - works
+/snap/clion/145/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/artur/Рабочий стол/patterns/console-game/console-game"
+-- The CXX compiler identification is GNU 9.3.0
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ - works
 -- Detecting CXX compiler ABI info
 -- Detecting CXX compiler ABI info - done
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug
+-- Build files have been written to: /home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug
