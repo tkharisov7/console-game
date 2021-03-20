@@ -5,7 +5,10 @@
 #ifndef CONSOLE_GAME_STATSFABRIC_H
 #define CONSOLE_GAME_STATSFABRIC_H
 
+#include "Stats.h"
 
+class StatsFabric {
 
+};
 
 #endif //CONSOLE_GAME_STATSFABRIC_H
