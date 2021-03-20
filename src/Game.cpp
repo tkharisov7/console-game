@@ -7,6 +7,12 @@
 #include <iostream>
 
 Game::Game(): player_stats_() {}
+
+Game::Game(std::vector<Stats*> a) {
+    for (Stats* st : a) {
+        player_stats_.push_back(*st);
+    }
+}
 Game::~Game() {
     player_stats_.clear();
 }

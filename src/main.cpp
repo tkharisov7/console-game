@@ -5,9 +5,11 @@
 
 
 #include "Game.h"
+#include "GameMode.h"
 
 int main() {
-    Game current_game;
+    GameMode game_mode;
+    Game current_game(game_mode.setDifficulty(game_mode.readDifficulty()));
     current_game.run();
 
     return 0;

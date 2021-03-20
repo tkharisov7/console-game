@@ -19,14 +19,16 @@ class Game {
 // Fields:
 public:
 
-
 private:
     std::vector<Stats> player_stats_;
+    std::vector<QuestionFabric*> question_fabrics_;
+    std::vector<StatsFabric*> stats_fabrics_;
 // Methods:
 public:
     //Constructor
     Game();
 
+    Game(std::vector<Stats*>);
     //Destructor
     ~Game();
 
