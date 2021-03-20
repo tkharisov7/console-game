@@ -16,7 +16,7 @@ public:
 private:
 // Classes:
     //we need this class to finish the game correctly if we lose
-    std::vector<Stats> currentStats;
+    std::vector<Stats> current_stats_;
 // Methods:
 public:
     //Constructor

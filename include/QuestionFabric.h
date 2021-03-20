@@ -8,7 +8,7 @@
 #include "Question.h"
 
 class QuestionFabric {
-    //Fields
+//Method
 public:
     virtual Question* factoryMethod() const = 0;
 };

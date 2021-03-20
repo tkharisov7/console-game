@@ -6,7 +6,7 @@
 #include "Stats.h"
 #include <iostream>
 
-Turn::Turn(std::vector<Stats> a): currentStats(a) {}
+Turn::Turn(std::vector<Stats> a): current_stats_(a) {}
 
 bool Turn::input() {
     bool answer;
@@ -23,16 +23,16 @@ std::vector<Stats> Turn::run() {
         }
     }
     bool answer = processQuestion(q);
-    std::vector<Stats> delta = answer ? q.impactOnStatsPositive : q.impactOnStatsNegative;
-    std::vector<Stats> result = currentStats;
+    std::vector<Stats> delta = answer ? q.impact_on_stats_positive : q.impact_on_stats_negative;
+    std::vector<Stats> result = current_stats_;
     for (Stats &a : result) {
         for (Stats &b : delta) {
-            if (a.nameOfStats == b.nameOfStats) {
+            if (a.name_of_stats == b.name_of_stats) {
                 a.points += b.points;
             }
         }
     }
-    return currentStats = result;
+    return current_stats_ = result;
 }
 
 Question Turn::getQuestion() {
@@ -41,10 +41,10 @@ Question Turn::getQuestion() {
 
 bool Turn::checker(const Question& q) {
     int counter = 0;
-    std::vector<Stats> result = currentStats;
-    for (const Stats& a : q.impactOnStatsPositive) {
+    std::vector<Stats> result = current_stats_;
+    for (const Stats& a : q.impact_on_stats_positive) {
         for (Stats& b : result) {
-            if (a.nameOfStats == b.nameOfStats) {
+            if (a.name_of_stats == b.name_of_stats) {
                 b.points += a.points;
             }
         }
@@ -54,10 +54,10 @@ bool Turn::checker(const Question& q) {
             counter++;
             break;
         }
-    result = currentStats;
-    for (const Stats& a : q.impactOnStatsNegative) {
+    result = current_stats_;
+    for (const Stats& a : q.impact_on_stats_negative) {
         for (Stats& b : result) {
-            if (a.nameOfStats == b.nameOfStats) {
+            if (a.name_of_stats == b.name_of_stats) {
                 b.points += a.points;
             }
         }
@@ -72,7 +72,7 @@ bool Turn::checker(const Question& q) {
 }
 
 bool Turn::processQuestion(const Question& q) {
-    std::cout << q.textOfQuestion << '\n';
+    std::cout << q.text_of_question << '\n';
     bool answer = input();
     return answer;
 }

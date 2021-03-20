@@ -4,10 +4,10 @@
 
 #include "Question.h"
 
-Question::Question() : textOfQuestion(), impactOnStatsPositive(), impactOnStatsNegative() {}
+Question::Question() : text_of_question(), impact_on_stats_positive(), impact_on_stats_negative() {}
 
 OrdinaryQuestion::OrdinaryQuestion() : Question() {}
 
-CountryQuestion::CountryQuestion(std::string s): nameOfCountry(s) {}
+CountryQuestion::CountryQuestion(std::string s): name_of_country(s) {}
 
-CountryQuestion::CountryQuestion(): nameOfCountry() {}
+CountryQuestion::CountryQuestion(): name_of_country() {}

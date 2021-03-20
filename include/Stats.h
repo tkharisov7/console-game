@@ -12,7 +12,7 @@ class Stats {
 //Fields:
 public:
     int points;
-    std::string nameOfStats;
+    std::string name_of_stats;
 //Methods:
 public:
     Stats() = default;
@@ -30,7 +30,7 @@ public:
 
 class CountryStats : public Stats {
 public:
-    std::string nameOfCountry;
+    std::string name_of_country;
     CountryStats();
     CountryStats(int, std::string);
 };
