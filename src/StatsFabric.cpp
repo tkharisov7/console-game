@@ -9,5 +9,5 @@ Stats* OrdinaryStatsFabric::factoryMethod() const {
 }
 
 Stats* CountryStatsFabric::factoryMethod() const {
-return new CountryStats();
+    return new CountryStats();
 }
