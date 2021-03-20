@@ -18,14 +18,15 @@ public:
 public:
     //Constructor
     Stats(int, std::string);
+
     //Destructor
     ~Stats();
 };
 
-class OrdinaryClass: public Stats {
+class OrdinaryClass : public Stats {
 
 };
 
-class CountryClass: public Stats {
+class CountryClass : public Stats {
 
 };

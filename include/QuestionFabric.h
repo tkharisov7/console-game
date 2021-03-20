@@ -10,17 +10,17 @@
 class QuestionFabric {
     //Fields
 public:
-    virtual Question *factoryMethod() const = 0;
+    virtual Question* factoryMethod() const = 0;
 };
 
-class OrdinaryQuestionFabric: public QuestionFabric {
- public:
-  Question* factoryMethod() const override;
+class OrdinaryQuestionFabric : public QuestionFabric {
+public:
+    Question* factoryMethod() const override;
 };
 
-class CountryQuestionFabric: public QuestionFabric {
- public:
-  Question* factoryMethod() const override;
+class CountryQuestionFabric : public QuestionFabric {
+public:
+    Question* factoryMethod() const override;
 };
 
 #endif //CONSOLE_GAME_QUESTIONFABRIC_H

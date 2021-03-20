@@ -23,17 +23,23 @@ private:
 public:
     //Constructor
     Turn(std::vector<Stats>);
+
     //starts the process of asking a question
     logFromRun run();
+
 private:
     //gets question from the pull of questions
     void getQuestion();
+
     // checks the question for correctness
     bool checker(const Question&);
+
     // takes user's answer
     bool input(std::ifstream&);
+
     //asks the question and gets an answer
     bool processQuestion(const Question&);
+
     //processes result of question
     void processResultOfQuestion(bool);
 };

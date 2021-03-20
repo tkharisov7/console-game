@@ -8,22 +8,21 @@
 #include "Stats.h"
 
 class StatsFabric {
-  //Fields
- public:
-  virtual Stats* factoryMethod() const = 0;
+    //Fields
+public:
+    virtual Stats* factoryMethod() const = 0;
 
 };
 
-class OrdinaryStatsFabric: public StatsFabric {
- public:
+class OrdinaryStatsFabric : public StatsFabric {
+public:
     Stats* factoryMethod() const override;
 };
 
-class CountryQuestionFabric: public StatsFabric {
- public:
+class CountryQuestionFabric : public StatsFabric {
+public:
     Stats* factoryMethod() const override;
 };
-
 
 
 #endif //CONSOLE_GAME_STATSFABRIC_H

@@ -59,19 +59,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/145/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = "/Users/timur_kharisov/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake"
 
 # The command to remove a file.
-RM = /snap/clion/145/bin/cmake/linux/bin/cmake -E rm -f
+RM = "/Users/timur_kharisov/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/artur/Рабочий стол/patterns/console-game/console-game"
+CMAKE_SOURCE_DIR = /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug"
+CMAKE_BINARY_DIR = /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = "/home/artur/Рабочий стол/patterns/console-game/co
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/145/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"/Users/timur_kharisov/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/145/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	"/Users/timur_kharisov/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -100,14 +100,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_progress_start "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug/CMakeFiles" "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug/src/CMakeFiles/progress.marks"
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug/CMakeFiles" 0
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug/CMakeFiles /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug/src/CMakeFiles/progress.marks
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -117,22 +117,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/console-game.dir/rule:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/console-game.dir/rule
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/console-game.dir/rule
 .PHONY : src/CMakeFiles/console-game.dir/rule
 
 # Convenience name for target.
@@ -142,7 +142,7 @@ console-game: src/CMakeFiles/console-game.dir/rule
 
 # fast build rule for target.
 console-game/fast:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/build
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/build
 .PHONY : console-game/fast
 
 Game.o: Game.cpp.o
@@ -151,7 +151,7 @@ Game.o: Game.cpp.o
 
 # target to build an object file
 Game.cpp.o:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/Game.cpp.o
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/Game.cpp.o
 .PHONY : Game.cpp.o
 
 Game.i: Game.cpp.i
@@ -160,7 +160,7 @@ Game.i: Game.cpp.i
 
 # target to preprocess a source file
 Game.cpp.i:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/Game.cpp.i
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/Game.cpp.i
 .PHONY : Game.cpp.i
 
 Game.s: Game.cpp.s
@@ -169,7 +169,7 @@ Game.s: Game.cpp.s
 
 # target to generate assembly for a file
 Game.cpp.s:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/Game.cpp.s
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/Game.cpp.s
 .PHONY : Game.cpp.s
 
 Question.o: Question.cpp.o
@@ -178,7 +178,7 @@ Question.o: Question.cpp.o
 
 # target to build an object file
 Question.cpp.o:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/Question.cpp.o
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/Question.cpp.o
 .PHONY : Question.cpp.o
 
 Question.i: Question.cpp.i
@@ -187,7 +187,7 @@ Question.i: Question.cpp.i
 
 # target to preprocess a source file
 Question.cpp.i:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/Question.cpp.i
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/Question.cpp.i
 .PHONY : Question.cpp.i
 
 Question.s: Question.cpp.s
@@ -196,7 +196,7 @@ Question.s: Question.cpp.s
 
 # target to generate assembly for a file
 Question.cpp.s:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/Question.cpp.s
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/Question.cpp.s
 .PHONY : Question.cpp.s
 
 QuestionFabric.o: QuestionFabric.cpp.o
@@ -205,7 +205,7 @@ QuestionFabric.o: QuestionFabric.cpp.o
 
 # target to build an object file
 QuestionFabric.cpp.o:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/QuestionFabric.cpp.o
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/QuestionFabric.cpp.o
 .PHONY : QuestionFabric.cpp.o
 
 QuestionFabric.i: QuestionFabric.cpp.i
@@ -214,7 +214,7 @@ QuestionFabric.i: QuestionFabric.cpp.i
 
 # target to preprocess a source file
 QuestionFabric.cpp.i:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/QuestionFabric.cpp.i
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/QuestionFabric.cpp.i
 .PHONY : QuestionFabric.cpp.i
 
 QuestionFabric.s: QuestionFabric.cpp.s
@@ -223,7 +223,7 @@ QuestionFabric.s: QuestionFabric.cpp.s
 
 # target to generate assembly for a file
 QuestionFabric.cpp.s:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/QuestionFabric.cpp.s
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/QuestionFabric.cpp.s
 .PHONY : QuestionFabric.cpp.s
 
 Stats.o: Stats.cpp.o
@@ -232,7 +232,7 @@ Stats.o: Stats.cpp.o
 
 # target to build an object file
 Stats.cpp.o:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/Stats.cpp.o
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/Stats.cpp.o
 .PHONY : Stats.cpp.o
 
 Stats.i: Stats.cpp.i
@@ -241,7 +241,7 @@ Stats.i: Stats.cpp.i
 
 # target to preprocess a source file
 Stats.cpp.i:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/Stats.cpp.i
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/Stats.cpp.i
 .PHONY : Stats.cpp.i
 
 Stats.s: Stats.cpp.s
@@ -250,7 +250,7 @@ Stats.s: Stats.cpp.s
 
 # target to generate assembly for a file
 Stats.cpp.s:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/Stats.cpp.s
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/Stats.cpp.s
 .PHONY : Stats.cpp.s
 
 StatsFabric.o: StatsFabric.cpp.o
@@ -259,7 +259,7 @@ StatsFabric.o: StatsFabric.cpp.o
 
 # target to build an object file
 StatsFabric.cpp.o:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/StatsFabric.cpp.o
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/StatsFabric.cpp.o
 .PHONY : StatsFabric.cpp.o
 
 StatsFabric.i: StatsFabric.cpp.i
@@ -268,7 +268,7 @@ StatsFabric.i: StatsFabric.cpp.i
 
 # target to preprocess a source file
 StatsFabric.cpp.i:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/StatsFabric.cpp.i
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/StatsFabric.cpp.i
 .PHONY : StatsFabric.cpp.i
 
 StatsFabric.s: StatsFabric.cpp.s
@@ -277,8 +277,35 @@ StatsFabric.s: StatsFabric.cpp.s
 
 # target to generate assembly for a file
 StatsFabric.cpp.s:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/StatsFabric.cpp.s
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/StatsFabric.cpp.s
 .PHONY : StatsFabric.cpp.s
+
+Turn.o: Turn.cpp.o
+
+.PHONY : Turn.o
+
+# target to build an object file
+Turn.cpp.o:
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/Turn.cpp.o
+.PHONY : Turn.cpp.o
+
+Turn.i: Turn.cpp.i
+
+.PHONY : Turn.i
+
+# target to preprocess a source file
+Turn.cpp.i:
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/Turn.cpp.i
+.PHONY : Turn.cpp.i
+
+Turn.s: Turn.cpp.s
+
+.PHONY : Turn.s
+
+# target to generate assembly for a file
+Turn.cpp.s:
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/Turn.cpp.s
+.PHONY : Turn.cpp.s
 
 main.o: main.cpp.o
 
@@ -286,7 +313,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/main.cpp.o
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -295,7 +322,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/main.cpp.i
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -304,7 +331,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/main.cpp.s
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -331,6 +358,9 @@ help:
 	@echo "... StatsFabric.o"
 	@echo "... StatsFabric.i"
 	@echo "... StatsFabric.s"
+	@echo "... Turn.o"
+	@echo "... Turn.i"
+	@echo "... Turn.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -345,6 +375,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

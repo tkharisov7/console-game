@@ -15,7 +15,7 @@
 // the instance of a game
 class Game {
 // Friends:
-friend class Turn;
+    friend class Turn;
 // Fields:
 public:
 
@@ -26,16 +26,20 @@ private:
 public:
     //Constructor
     Game();
+
     //Destructor
     ~Game();
+
     //Runs the game
     void run();
 
 private:
     // processes player input
     void processInput();
+
     // updates the game
     void update();
+
     // renders the UI
     void render();
 };

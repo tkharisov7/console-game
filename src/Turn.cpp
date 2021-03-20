@@ -8,7 +8,8 @@
 class Turn::logFromRun {
 public:
     std::vector<Stats> impact;
-    logFromRun(std::vector<Stats> impact): impact(impact) {}
+
+    logFromRun(std::vector<Stats> impact) : impact(impact) {}
 };
 
 bool input(std::ifstream& in) {
@@ -36,7 +37,9 @@ bool Turn::checker(const Question& q) {
 
 }
 
-bool Turn processQuestion(const Question& q) {
+bool Turn
+
+processQuestion(const Question& q) {
     std::cout << q.textOfQuestion << '\n';
     bool answer = input();
     return answer;

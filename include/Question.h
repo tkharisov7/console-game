@@ -4,6 +4,7 @@
 
 #ifndef CONSOLE_GAME_QUESTION_H
 #define CONSOLE_GAME_QUESTION_H
+
 #include <string>
 #include <vector>
 #include "Stats.h"
@@ -21,17 +22,20 @@ public:
 public:
     // Constructor
     Question();
+
     // Destructor
     ~Question();
+
     void doImpact(bool answer);
 };
 
-class OrdinaryQuestion: public Question {
+class OrdinaryQuestion : public Question {
 
 };
 
-class CountryQuestion: public Question {
+class CountryQuestion : public Question {
 public:
     std::string nameOfCountry;
 };
+
 #endif //CONSOLE_GAME_QUESTION_H

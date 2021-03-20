@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/console-game.dir/QuestionFabric.cpp.o"
   "CMakeFiles/console-game.dir/Stats.cpp.o"
   "CMakeFiles/console-game.dir/StatsFabric.cpp.o"
+  "CMakeFiles/console-game.dir/Turn.cpp.o"
   "CMakeFiles/console-game.dir/main.cpp.o"
 )
 

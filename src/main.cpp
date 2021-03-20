@@ -8,7 +8,7 @@
 
 int main() {
     Game current_game;
-    game.run()
+    current_game.run();
 
     return 0;
 }
