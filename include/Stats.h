@@ -6,3 +6,16 @@
 #define CONSOLE_GAME_STATS_H
 
 #endif //CONSOLE_GAME_STATS_H
+
+class Stats {
+//Fields:
+public:
+    int points;
+    std::string nameOfStats;
+//Methods:
+public:
+    //Constructor
+    Stats(int);
+    //Destructor
+    ~Stats();
+};
