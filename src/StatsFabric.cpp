@@ -4,20 +4,10 @@
 
 #include "StatsFabric.h"
 
-OrdinaryStatsFabric::factoryMethod() const
-
-override {
-return new
-
-OrdinaryStats();
-
+Stats* OrdinaryStatsFabric::factoryMethod() const {
+    return new OrdinaryStats();
 }
 
-CountryStatsFabric::factoryMethod() const
-
-override {
-return new
-
-CountryStats();
-
+Stats* CountryStatsFabric::factoryMethod() const {
+return new CountryStats();
 }
