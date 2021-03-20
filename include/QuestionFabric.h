@@ -12,13 +12,13 @@ class QuestionFabric {
  public:
   virtual Question* factoryMethod() const = 0;
 
- private:
 
-  //Methods
-
+class OrdinaryQuestionFabric: public QuestionFabric {
+ public:
+  Question* factoryMethod() const override;
 };
 
-class OrdinaryQuestionFabric {
+class CountryQuestionFabric: public QuestionFabric {
  public:
   Question* factoryMethod() const override;
 };

@@ -3,3 +3,12 @@
 //
 
 #include "QuestionFabric.h"
+
+OrdinaryQuestionFabric::Question* factoryMethod() const override {
+  return new OrdinaryQuestion();
+}
+
+
+CountryQuestionFabric::Question* factoryMethod() const override {
+  return new CountryQuestion();
+}
