@@ -22,20 +22,21 @@ public:
 public:
     // Constructor
     Question();
-
     // Destructor
-    ~Question();
-
-    void doImpact(bool answer);
+    ~Question() = default;
 };
 
 class OrdinaryQuestion : public Question {
-
+public:
+    OrdinaryQuestion();
 };
 
 class CountryQuestion : public Question {
 public:
     std::string nameOfCountry;
+    CountryQuestion();
+
+    CountryQuestion(std::string);
 };
 
 #endif //CONSOLE_GAME_QUESTION_H

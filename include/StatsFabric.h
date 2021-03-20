@@ -19,7 +19,7 @@ public:
     Stats* factoryMethod() const override;
 };
 
-class CountryQuestionFabric : public StatsFabric {
+class CountryStatsFabric : public StatsFabric {
 public:
     Stats* factoryMethod() const override;
 };

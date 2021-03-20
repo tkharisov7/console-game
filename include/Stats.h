@@ -24,11 +24,14 @@ public:
     ~Stats() = default;
 };
 
-class OrdinaryStats;
+class OrdinaryStats : public Stats {
+public:
+    OrdinaryStats();
+};
 
 class CountryStats : public Stats {
 public:
     std::string nameOfCountry;
-
+    CountryStats();
     CountryStats(int, std::string);
 };

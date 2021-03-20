@@ -7,4 +7,8 @@
 //Constructor
 Stats::Stats(int a, std::string s): points(a), nameOfStats(s) {}
 
+OrdinaryStats::OrdinaryStats() : Stats() {}
+
+CountryStats::CountryStats() : Stats() {}
+
 CountryStats::CountryStats(int a, std::string t) : Stats(a, "relationship with country"), nameOfCountry(t) {}

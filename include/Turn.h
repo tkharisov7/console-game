@@ -18,14 +18,14 @@ public:
 private:
 // Classes:
     //we need this class to finish the game correctly if we lose
-    class logFromRun;
+    std::vector<Stats> currentStats;
 // Methods:
 public:
     //Constructor
     Turn(std::vector<Stats>);
 
     //starts the process of asking a question
-    logFromRun run();
+    std::vector<Stats> run();
 
 private:
     //gets question from the pull of questions
@@ -39,7 +39,4 @@ private:
 
     //asks the question and gets an answer
     bool processQuestion(const Question&);
-
-    //processes result of question
-    void processResultOfQuestion(bool);
 };
