@@ -33,6 +33,12 @@ public:
     //Runs the game
     void run();
 
+    //Starts game tutorial in the start of the game session
+    void startTutorial();
+
+    //Ends the game when player dies
+    void endGame();
+
 private:
     // processes player input
     void processInput();
