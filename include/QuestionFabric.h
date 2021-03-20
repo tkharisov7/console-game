@@ -5,17 +5,22 @@
 #ifndef CONSOLE_GAME_QUESTIONFABRIC_H
 #define CONSOLE_GAME_QUESTIONFABRIC_H
 
+#include "Question.h"
+
 class QuestionFabric {
   //Fields
  public:
-  //Returns Question
-  Question getQuestion();
+  virtual Question* factoryMethod() const = 0;
 
  private:
 
-
   //Methods
 
+};
+
+class OrdinaryQuestionFabric {
+ public:
+  Question* factoryMethod() const override;
 };
 
 #endif //CONSOLE_GAME_QUESTIONFABRIC_H
