@@ -9,6 +9,7 @@
 
 #include "QuestionFabric.h"
 #include "StatsFabric.h"
+#include <vector>
 
 class Turn {
 // Fields:
@@ -18,9 +19,10 @@ private:
 // Classes:
     //we need this class to finish the game correctly if we lose
     class logFromRun;
-
 // Methods:
 public:
+    //Constructor
+    Turn(std::vector<Stats>);
     //starts the process of asking a question
     logFromRun run();
 private:
@@ -28,7 +30,8 @@ private:
     void getQuestion();
     // checks the question for correctness
     bool checker(const Question&);
-
+    // takes user's answer
+    bool input(std::ifstream&);
     //asks the question and gets an answer
     bool processQuestion(const Question&);
     //processes result of question

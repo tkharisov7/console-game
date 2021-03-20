@@ -22,6 +22,7 @@ public:
     Question();
     // Destructor
     ~Question();
+    void doImpact(bool answer);
 };
 
 class OrdinaryQuestion: public Question {
