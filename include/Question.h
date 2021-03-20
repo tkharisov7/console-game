@@ -6,6 +6,7 @@
 #define CONSOLE_GAME_QUESTION_H
 #include <string>
 #include <vector>
+#include "Stats.h"
 
 class Question {
 //Fields:

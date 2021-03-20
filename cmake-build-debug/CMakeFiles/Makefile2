@@ -55,19 +55,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "/Users/timur_kharisov/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake"
+CMAKE_COMMAND = /snap/clion/145/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = "/Users/timur_kharisov/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E rm -f
+RM = /snap/clion/145/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game
+CMAKE_SOURCE_DIR = "/home/artur/Рабочий стол/patterns/console-game/console-game"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug
+CMAKE_BINARY_DIR = "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -112,14 +112,14 @@ src/clean: src/CMakeFiles/console-game.dir/clean
 src/CMakeFiles/console-game.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/console-game.dir/build.make src/CMakeFiles/console-game.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target console-game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug/CMakeFiles" --progress-num=1,2,3,4,5,6,7 "Built target console-game"
 .PHONY : src/CMakeFiles/console-game.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/console-game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug/CMakeFiles" 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/console-game.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/timur_kharisov/OneDrive/Study/mipt/coding/Programming-Technologies-2-sem/console-game/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/artur/Рабочий стол/patterns/console-game/console-game/cmake-build-debug/CMakeFiles" 0
 .PHONY : src/CMakeFiles/console-game.dir/rule
 
 # Convenience name for target.

@@ -8,10 +8,10 @@
 #include "Question.h"
 
 class QuestionFabric {
-  //Fields
- public:
-  virtual Question* factoryMethod() const = 0;
-
+    //Fields
+public:
+    virtual Question *factoryMethod() const = 0;
+};
 
 class OrdinaryQuestionFabric: public QuestionFabric {
  public:

@@ -14,14 +14,14 @@ class StatsFabric {
 
 };
 
-class OrdinaryStatsFabric {
+class OrdinaryStatsFabric: public StatsFabric {
  public:
-  Stats* factoryMethod() const override;
+    Stats* factoryMethod() const override;
 };
 
-class CountryQuestionFabric {
+class CountryQuestionFabric: public StatsFabric {
  public:
-  Stats* factoryMethod() const override;
+    Stats* factoryMethod() const override;
 };
 
 
