@@ -5,7 +5,6 @@
 #ifndef CONSOLE_GAME_STATS_H
 #define CONSOLE_GAME_STATS_H
 
-#endif //CONSOLE_GAME_STATS_H
 
 #include <string>
 
@@ -35,3 +34,6 @@ public:
     CountryStats();
     CountryStats(int, std::string);
 };
+
+
+#endif //CONSOLE_GAME_STATS_H

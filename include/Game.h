@@ -43,9 +43,6 @@ private:
     // processes player input
     void processInput();
 
-    // updates the game
-    void update();
-
     // renders the UI
     void render();
 };

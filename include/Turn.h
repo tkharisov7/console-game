@@ -5,8 +5,6 @@
 #ifndef CONSOLE_GAME_TURN_H
 #define CONSOLE_GAME_TURN_H
 
-#endif //CONSOLE_GAME_TURN_H
-
 #include "QuestionFabric.h"
 #include "StatsFabric.h"
 #include <vector>
@@ -40,3 +38,4 @@ private:
     //asks the question and gets an answer
     bool processQuestion(const Question&);
 };
+#endif //CONSOLE_GAME_TURN_H
