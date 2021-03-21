@@ -8,9 +8,12 @@
 
 Game::Game(): player_stats_() {}
 
-Game::Game(std::vector<Stats*> a) {
-    for (Stats* st : a) {
-        player_stats_.push_back(*st);
+Game::Game(const std::vector<Stats*>& stat_arg, const std::vector<Question>& question_arg) {
+    for (Stats* stat : stat_arg) {
+        player_stats_.push_back(*stat);
+    }
+    for (const Question& question  : question_arg) {
+        question_pool_.push_back(question);
     }
 }
 Game::~Game() {

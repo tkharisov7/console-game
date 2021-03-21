@@ -4,10 +4,10 @@
 
 #include "StatsFabric.h"
 
-Stats* OrdinaryStatsFabric::factoryMethod() const {
-    return new OrdinaryStats();
+Stats* OrdinaryStatsFabric::factoryMethod(int arg_points, const std::string& arg_name) const {
+    return new OrdinaryStats(arg_points, arg_name);
 }
 
-Stats* CountryStatsFabric::factoryMethod() const {
-    return new CountryStats();
+Stats* CountryStatsFabric::factoryMethod(int arg_points, const std::string& arg_name) const {
+    return new CountryStats(arg_points, arg_name);
 }

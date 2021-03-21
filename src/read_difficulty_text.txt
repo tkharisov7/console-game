@@ -1,4 +1,0 @@
-please, choose difficulty:
-1 - easy
-2 - hard
-

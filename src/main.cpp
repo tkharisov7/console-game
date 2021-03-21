@@ -9,7 +9,8 @@
 
 int main() {
     GameMode game_mode;
-    Game current_game(game_mode.setDifficulty(game_mode.readDifficulty()));
+    std::pair<std::vector<Stats*>, std::vector<Question>> data = GameMode::setDifficulty(GameMode::readDifficulty());
+    Game current_game(data.first, data.second);
     current_game.run();
 
     return 0;

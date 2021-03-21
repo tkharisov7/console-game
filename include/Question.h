@@ -28,15 +28,17 @@ public:
 
 class OrdinaryQuestion : public Question {
 public:
+    //Constructor
     OrdinaryQuestion();
+    //Text of question and Stats constructor
+    OrdinaryQuestion(const std::string&, const std::vector<Stats>&, const std::vector<Stats>&);
 };
 
 class CountryQuestion : public Question {
 public:
     std::string name_of_country;
     CountryQuestion();
-
-    CountryQuestion(std::string);
+    CountryQuestion(const std::string&, const std::string&, const std::vector<Stats>&, const std::vector<Stats>&);
 };
 
 #endif //CONSOLE_GAME_QUESTION_H

@@ -21,14 +21,13 @@ public:
 
 private:
     std::vector<Stats> player_stats_;
-    std::vector<QuestionFabric*> question_fabrics_;
-    std::vector<StatsFabric*> stats_fabrics_;
+    std::vector<Question> question_pool_;
 // Methods:
 public:
     //Constructor
     Game();
 
-    Game(std::vector<Stats*>);
+    Game(const std::vector<Stats*>& stat_arg, const std::vector<Question>& question_arg);
     //Destructor
     ~Game();
 
@@ -37,7 +36,7 @@ public:
 
 private:
     //Starts game tutorial in the start of the game session
-    void startTutorial();
+    static void startTutorial();
 
     //Ends the game when player dies
     void endGame();

@@ -17,7 +17,7 @@ public:
 public:
     Stats() = default;
     //Constructor
-    Stats(int, std::string);
+    Stats(int, const std::string&);
 
     //Destructor
     ~Stats() = default;
@@ -26,13 +26,14 @@ public:
 class OrdinaryStats : public Stats {
 public:
     OrdinaryStats();
+    OrdinaryStats(int, const std::string&);
 };
 
 class CountryStats : public Stats {
 public:
     std::string name_of_country;
     CountryStats();
-    CountryStats(int, std::string);
+    CountryStats(int, const std::string&);
 };
 
 
