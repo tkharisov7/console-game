@@ -17,10 +17,11 @@ private:
 // Classes:
     //we need this class to finish the game correctly if we lose
     std::vector<Stats> current_stats_;
+    std::vector<Question> question_pool_;
 // Methods:
 public:
     //Constructor
-    Turn(std::vector<Stats>);
+    Turn(std::vector<Stats>, std::vector<Question>);
 
     //starts the process of asking a question
     std::vector<Stats> run();

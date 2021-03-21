@@ -6,7 +6,7 @@
 #include "Stats.h"
 #include <iostream>
 
-Turn::Turn(std::vector<Stats> a): current_stats_(a) {}
+Turn::Turn(std::vector<Stats> a, std::vector<Question> b): current_stats_(a), question_pool_(b) {}
 
 bool Turn::input() {
     bool answer;
