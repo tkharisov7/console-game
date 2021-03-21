@@ -7,21 +7,21 @@
 
 #include "Stats.h"
 
-class StatsFabric {
+class StatsCreator {
     //Fields
 public:
-    virtual Stats* factoryMethod(int arg_points, const std::string& arg_name) const = 0;
+    virtual Stats* createStats(int arg_points, const std::string& arg_name) const = 0;
 
 };
 
-class OrdinaryStatsFabric : public StatsFabric {
+class OrdinaryStatsCreator: public StatsCreator {
 public:
-    Stats* factoryMethod(int arg_points, const std::string& arg_name) const override;
+    Stats* createStats(int arg_points, const std::string& arg_name) const override;
 };
 
-class CountryStatsFabric : public StatsFabric {
+class CountryStatsCreator : public StatsCreator {
 public:
-    Stats* factoryMethod(int arg_points, const std::string& arg_name) const override;
+    Stats* createStats(int arg_points, const std::string& arg_name) const override;
 };
 
 

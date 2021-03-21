@@ -7,20 +7,20 @@
 
 #include "Question.h"
 
-class QuestionFabric {
+class QuestionCreator {
 //Method
 public:
-    virtual Question* factoryMethod(const std::string&, const std::vector<Stats>&, const std::vector<Stats>&) const = 0;
+    virtual Question* createQuestion(const std::string&, const std::vector<Stats>&, const std::vector<Stats>&) const = 0;
 };
 
-class OrdinaryQuestionFabric : public QuestionFabric {
+class OrdinaryQuestionCreator : public QuestionCreator {
 public:
-    Question* factoryMethod(const std::string&, const std::vector<Stats>&, const std::vector<Stats>&) const override;
+    Question* createQuestion(const std::string&, const std::vector<Stats>&, const std::vector<Stats>&) const override;
 };
 
-class CountryQuestionFabric : public QuestionFabric {
+class CountryQuestionCreator : public QuestionCreator {
 public:
-    Question* factoryMethod(const std::string&, const std::vector<Stats>&, const std::vector<Stats>&) const override;
+    Question* createQuestion(const std::string&, const std::vector<Stats>&, const std::vector<Stats>&) const override;
 };
 
 #endif //CONSOLE_GAME_QUESTIONFABRIC_H
