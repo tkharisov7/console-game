@@ -1,17 +1,17 @@
 # console-game
-##Description
+## Description
 
 Simple game using C++.
 
 It is based on Reigns game.
 
-##Requirements
+## Requirements
 
 You will need the following installed to build the project:
 * CMake
 * Make
 
-##Build instructions
+## Build instructions
 
 Run the *cmake* on the *main* folder:
 ```
