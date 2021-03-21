@@ -30,8 +30,10 @@ public:
 };
 
 class CountryStats : public Stats {
+    //Fields
 public:
     std::string name_of_country;
+    //Methods
     CountryStats();
     CountryStats(int, const std::string&);
 };
