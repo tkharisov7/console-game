@@ -1,0 +1,15 @@
+**/build
+**/lib
+/.DS_Store
+/cmake-build-debug/
+/.idea/
+/bin/
+/src/Makefile
+/src/cmake_install.cmake
+/CMakeFiles/
+/CMakeCache.txt
+/Makefile
+/cmake_install.cmake
+/console-game.cbp
+/Testing/
+/src/CMakeFiles/
