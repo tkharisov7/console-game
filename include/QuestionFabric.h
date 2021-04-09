@@ -9,18 +9,18 @@
 
 class QuestionCreator {
 //Method
-public:
-    virtual Question* createQuestion(const std::string&, const std::vector<Stats>&, const std::vector<Stats>&) const = 0;
+ public:
+  virtual Question* createQuestion(const std::string&, const std::vector<Stats>&, const std::vector<Stats>&) const = 0;
 };
 
 class OrdinaryQuestionCreator : public QuestionCreator {
-public:
-    Question* createQuestion(const std::string&, const std::vector<Stats>&, const std::vector<Stats>&) const override;
+ public:
+  Question* createQuestion(const std::string&, const std::vector<Stats>&, const std::vector<Stats>&) const override;
 };
 
 class CountryQuestionCreator : public QuestionCreator {
-public:
-    Question* createQuestion(const std::string&, const std::vector<Stats>&, const std::vector<Stats>&) const override;
+ public:
+  Question* createQuestion(const std::string&, const std::vector<Stats>&, const std::vector<Stats>&) const override;
 };
 
 #endif //CONSOLE_GAME_QUESTIONFABRIC_H
