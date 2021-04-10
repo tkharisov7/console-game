@@ -20,6 +20,66 @@ class Stats {
 
   //Destructor
   ~Stats() = default;
+
+  virtual std::string statsOutput() const;
+};
+
+class StatsOutputDecorator : public Stats {
+protected:
+    Stats* stats_;
+public:
+    StatsOutputDecorator(Stats* stats): stats_(stats) {}
+
+    std::string statsOutput() const override;
+};
+
+class ArmyStatsOutputDecorator : public StatsOutputDecorator {
+public:
+    ArmyStatsOutputDecorator(Stats* stats) : StatsOutputDecorator(stats) {}
+
+    std::string statsOutput() const override;
+};
+
+class MoneyStatsOutputDecorator : public StatsOutputDecorator {
+public:
+    MoneyStatsOutputDecorator(Stats* stats) : StatsOutputDecorator(stats) {}
+
+    std::string statsOutput() const override;
+};
+
+class PeopleStatsOutputDecorator : public StatsOutputDecorator {
+public:
+    PeopleStatsOutputDecorator(Stats* stats) : StatsOutputDecorator(stats) {}
+
+    std::string statsOutput() const override;
+};
+
+class ChurchStatsOutputDecorator : public StatsOutputDecorator {
+public:
+    ChurchStatsOutputDecorator(Stats* stats) : StatsOutputDecorator(stats) {}
+
+    std::string statsOutput() const override;
+};
+
+class FijiStatsOutputDecorator : public StatsOutputDecorator {
+public:
+    FijiStatsOutputDecorator(Stats* stats) : StatsOutputDecorator(stats) {}
+
+    std::string statsOutput() const override;
+};
+
+class NiueStatsOutputDecorator : public StatsOutputDecorator {
+public:
+    NiueStatsOutputDecorator(Stats* stats) : StatsOutputDecorator(stats) {}
+
+    std::string statsOutput() const override;
+};
+
+class MayotteStatsOutputDecorator : public StatsOutputDecorator {
+public:
+    MayotteStatsOutputDecorator(Stats* stats) : StatsOutputDecorator(stats) {}
+
+    std::string statsOutput() const override;
 };
 
 class OrdinaryStats : public Stats {

@@ -13,5 +13,6 @@ int main() {
   Game current_game(data.first, data.second);
   current_game.run();
 
+  std::cout << "\U0001F1F3\U0001F1FA";
   return 0;
 }

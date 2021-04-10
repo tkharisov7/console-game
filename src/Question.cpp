@@ -6,6 +6,8 @@
 
 Question::Question() : text_of_question(), impact_on_stats_positive(), impact_on_stats_negative() {}
 
+std::string Question::questionOutput() const {}
+
 OrdinaryQuestion::OrdinaryQuestion(const std::string& arg_text_of_question,
                                    const std::vector<Stats>& arg_impact_on_stats_positive,
                                    const std::vector<Stats>& arg_impact_on_stats_negative) {

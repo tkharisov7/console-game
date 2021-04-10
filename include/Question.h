@@ -24,6 +24,8 @@ class Question {
   Question();
   // Destructor
   ~Question() = default;
+
+  std::string questionOutput() const;
 };
 
 class OrdinaryQuestion : public Question {
@@ -32,6 +34,7 @@ class OrdinaryQuestion : public Question {
   OrdinaryQuestion();
   //Text of question and Stats constructor
   OrdinaryQuestion(const std::string&, const std::vector<Stats>&, const std::vector<Stats>&);
+
 };
 
 class CountryQuestion : public Question {
