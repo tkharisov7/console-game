@@ -8,6 +8,7 @@
 #include <string>
 #include <vector>
 #include "Stats.h"
+#include <fstream>
 
 class Question {
 //Fields:
@@ -25,6 +26,7 @@ class Question {
   // Destructor
   ~Question() = default;
 
+  Question(std::string, std::vector<Stats>, std::vector<Stats>);
   std::string questionOutput() const;
 };
 
@@ -42,6 +44,13 @@ class CountryQuestion : public Question {
   std::string name_of_country;
   CountryQuestion();
   CountryQuestion(const std::string&, const std::string&, const std::vector<Stats>&, const std::vector<Stats>&);
+};
+
+class QuestionPool {
+private:
+    std::vector<Question> questions_;
+public:
+    void extractQuestions(std::string fileName);
 };
 
 #endif //CONSOLE_GAME_QUESTION_H
