@@ -10,7 +10,7 @@
 class Stats {
 //Fields:
  public:
-  int points;
+  int points{0};
   std::string name_of_stats;
 //Methods:
  public:
@@ -25,61 +25,61 @@ class Stats {
 };
 
 class StatsOutputDecorator : public Stats {
-protected:
-    Stats* stats_;
-public:
-    StatsOutputDecorator(Stats* stats): stats_(stats) {}
+ protected:
+  Stats* stats_;
+ public:
+  StatsOutputDecorator(Stats* stats) : stats_(stats) {}
 
-    std::string statsOutput() const override;
+  std::string statsOutput() const override;
 };
 
 class ArmyStatsOutputDecorator : public StatsOutputDecorator {
-public:
-    ArmyStatsOutputDecorator(Stats* stats) : StatsOutputDecorator(stats) {}
+ public:
+  ArmyStatsOutputDecorator(Stats* stats) : StatsOutputDecorator(stats) {}
 
-    std::string statsOutput() const override;
+  std::string statsOutput() const override;
 };
 
 class MoneyStatsOutputDecorator : public StatsOutputDecorator {
-public:
-    MoneyStatsOutputDecorator(Stats* stats) : StatsOutputDecorator(stats) {}
+ public:
+  MoneyStatsOutputDecorator(Stats* stats) : StatsOutputDecorator(stats) {}
 
-    std::string statsOutput() const override;
+  std::string statsOutput() const override;
 };
 
 class PeopleStatsOutputDecorator : public StatsOutputDecorator {
-public:
-    PeopleStatsOutputDecorator(Stats* stats) : StatsOutputDecorator(stats) {}
+ public:
+  PeopleStatsOutputDecorator(Stats* stats) : StatsOutputDecorator(stats) {}
 
-    std::string statsOutput() const override;
+  std::string statsOutput() const override;
 };
 
 class ChurchStatsOutputDecorator : public StatsOutputDecorator {
-public:
-    ChurchStatsOutputDecorator(Stats* stats) : StatsOutputDecorator(stats) {}
+ public:
+  ChurchStatsOutputDecorator(Stats* stats) : StatsOutputDecorator(stats) {}
 
-    std::string statsOutput() const override;
+  std::string statsOutput() const override;
 };
 
 class FijiStatsOutputDecorator : public StatsOutputDecorator {
-public:
-    FijiStatsOutputDecorator(Stats* stats) : StatsOutputDecorator(stats) {}
+ public:
+  FijiStatsOutputDecorator(Stats* stats) : StatsOutputDecorator(stats) {}
 
-    std::string statsOutput() const override;
+  std::string statsOutput() const override;
 };
 
 class NiueStatsOutputDecorator : public StatsOutputDecorator {
-public:
-    NiueStatsOutputDecorator(Stats* stats) : StatsOutputDecorator(stats) {}
+ public:
+  NiueStatsOutputDecorator(Stats* stats) : StatsOutputDecorator(stats) {}
 
-    std::string statsOutput() const override;
+  std::string statsOutput() const override;
 };
 
 class MayotteStatsOutputDecorator : public StatsOutputDecorator {
-public:
-    MayotteStatsOutputDecorator(Stats* stats) : StatsOutputDecorator(stats) {}
+ public:
+  MayotteStatsOutputDecorator(Stats* stats) : StatsOutputDecorator(stats) {}
 
-    std::string statsOutput() const override;
+  std::string statsOutput() const override;
 };
 
 class OrdinaryStats : public Stats {

@@ -14,7 +14,7 @@ std::vector<Question> GameMode::generateQuestionPoolMedium() {}
 
 std::vector<Question> GameMode::generateQuestionPoolHard() {}
 
-std::pair<std::vector<Stats*>, std::vector<Question>> GameMode::setDifficulty(int x) {
+std::pair<std::vector<Stats*>, QuestionPool*> GameMode::setDifficulty(int x) {
   OrdinaryStatsCreator ordinary_stats_creator;
   std::vector<Stats*> stats_result;
   stats_result.push_back(ordinary_stats_creator.createStats(10, "People"));
@@ -25,6 +25,6 @@ std::pair<std::vector<Stats*>, std::vector<Question>> GameMode::setDifficulty(in
     CountryStatsCreator country_stats_fabric;
     stats_result.push_back(country_stats_fabric.createStats(10, "Liberia"));
   }
-  std::vector<Question> question_result;
+  QuestionPool* question_result;
   return {stats_result, question_result};
 }

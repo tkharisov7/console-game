@@ -9,10 +9,8 @@
 
 int main() {
   GameMode game_mode;
-  std::pair<std::vector<Stats*>, std::vector<Question>> data = GameMode::setDifficulty(GameMode::readDifficulty());
+  std::pair<std::vector<Stats*>, QuestionPool*> data = GameMode::setDifficulty(GameMode::readDifficulty());
   Game current_game(data.first, data.second);
-  current_game.run();
-
-  std::cout << "\U0001F1F3\U0001F1FA";
+  Game::run();
   return 0;
 }
