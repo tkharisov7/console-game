@@ -10,9 +10,9 @@ int GameMode::readDifficulty() {
   return difficulty;
 }
 
-std::vector<Question> GameMode::generateQuestionPoolMedium() {}
+QuestionPool* GameMode::generateQuestionPoolMedium() {}
 
-std::vector<Question> GameMode::generateQuestionPoolHard() {}
+QuestionPool* GameMode::generateQuestionPoolHard() {}
 
 std::pair<std::vector<Stats*>, QuestionPool*> GameMode::setDifficulty(int x) {
   OrdinaryStatsCreator ordinary_stats_creator;
@@ -23,7 +23,9 @@ std::pair<std::vector<Stats*>, QuestionPool*> GameMode::setDifficulty(int x) {
   stats_result.push_back(ordinary_stats_creator.createStats(10, "Money"));
   if (x != 1) {
     CountryStatsCreator country_stats_fabric;
-    stats_result.push_back(country_stats_fabric.createStats(10, "Liberia"));
+    stats_result.push_back(country_stats_fabric.createStats(10, "Fiji"));
+    stats_result.push_back(country_stats_fabric.createStats(10, "Niue"));
+    stats_result.push_back(country_stats_fabric.createStats(10, "Mayotte"));
   }
   QuestionPool* question_result;
   return {stats_result, question_result};
