@@ -63,7 +63,7 @@ class QuestionPool {
   std::vector<Question> questions_;
   Game* current_game_;
  public:
-  void extractQuestions(std::string fileName);
+  QuestionPool(std::string fileName, Game*);
 };
 
 #endif //CONSOLE_GAME_QUESTION_H

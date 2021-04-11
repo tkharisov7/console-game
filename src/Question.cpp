@@ -42,9 +42,9 @@ CountryQuestion::CountryQuestion(const std::string& s, const std::string& arg_te
 
 CountryQuestion::CountryQuestion() : name_of_country() {}
 
-void QuestionPool::extractQuestions(std::string fileName) {
-  std::ifstream a(fileName);
-
+QuestionPool::QuestionPool(std::string file_name, Game* arg_current_game) {
+  current_game_ = arg_current_game;
+  std::ifstream a(file_name);
   while (!a.eof()) {
     std::string s;
     char c;
