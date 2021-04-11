@@ -2,6 +2,7 @@
 // Created by artur on 20.03.2021.
 //
 
+
 #ifndef CONSOLE_GAME_QUESTION_H
 #define CONSOLE_GAME_QUESTION_H
 
@@ -9,6 +10,8 @@
 #include <vector>
 #include "Stats.h"
 #include <fstream>
+
+class Game;
 
 class Question {
 //Fields:
@@ -19,6 +22,8 @@ class Question {
   std::vector<Stats> impact_on_stats_positive;
   //Impact of the question on Stats if answer is negative
   std::vector<Stats> impact_on_stats_negative;
+  //Game stats - current stats from the game
+  std::vector<Stats*> game_stats;
 // Methods:
  public:
   // Constructor
@@ -26,7 +31,7 @@ class Question {
   // Destructor
   ~Question() = default;
 
-  Question(std::string, std::vector<Stats>, std::vector<Stats>);
+  Question(const std::string&, const std::vector<Stats>&, const std::vector<Stats>&, const std::vector<Stats*>&);
   std::string questionOutput() const;
 };
 
@@ -35,7 +40,10 @@ class OrdinaryQuestion : public Question {
   //Constructor
   OrdinaryQuestion();
   //Text of question and Stats constructor
-  OrdinaryQuestion(const std::string&, const std::vector<Stats>&, const std::vector<Stats>&);
+  OrdinaryQuestion(const std::string&,
+                   const std::vector<Stats>&,
+                   const std::vector<Stats>&,
+                   const std::vector<Stats*>&);
 
 };
 
@@ -43,14 +51,19 @@ class CountryQuestion : public Question {
  public:
   std::string name_of_country;
   CountryQuestion();
-  CountryQuestion(const std::string&, const std::string&, const std::vector<Stats>&, const std::vector<Stats>&);
+  CountryQuestion(const std::string&,
+                  const std::string&,
+                  const std::vector<Stats>&,
+                  const std::vector<Stats>&,
+                  const std::vector<Stats*>&);
 };
 
 class QuestionPool {
-private:
-    std::vector<Question> questions_;
-public:
-    void extractQuestions(std::string fileName);
+ private:
+  std::vector<Question> questions_;
+  Game* current_game_;
+ public:
+  QuestionPool(std::string fileName, Game*);
 };
 
 #endif //CONSOLE_GAME_QUESTION_H

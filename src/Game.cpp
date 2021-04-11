@@ -6,15 +6,13 @@
 #include "Game.h"
 #include <iostream>
 
-Game::Game() : player_stats_() {}
+Game::Game() : player_stats_(), question_pool_() {}
 
-Game::Game(const std::vector<Stats*>& stat_arg, const std::vector<Question>& question_arg) {
+Game::Game(const std::vector<Stats*>& stat_arg, QuestionPool* arg_question_pool) {
   for (Stats* stat : stat_arg) {
-    player_stats_.push_back(*stat);
+    player_stats_.push_back(stat);
   }
-  for (const Question& question : question_arg) {
-    question_pool_.push_back(question);
-  }
+  question_pool_ = arg_question_pool;
 }
 Game::~Game() {
   player_stats_.clear();

@@ -6,6 +6,7 @@
 #define CONSOLE_GAME_TURN_H
 
 #include "QuestionFabric.h"
+#include "Question.h"
 #include "StatsFabric.h"
 #include <vector>
 
@@ -16,15 +17,15 @@ class Turn {
  private:
 // Classes:
   //we need this class to finish the game correctly if we lose
-  std::vector<Stats> current_stats_;
-  std::vector<Question> question_pool_;
+  std::vector<Stats*> current_stats_;
+  QuestionPool* question_pool_;
 // Methods:
  public:
   //Constructor
-  Turn(std::vector<Stats>, std::vector<Question>);
+  Turn(const std::vector<Stats*>&, QuestionPool*);
 
   //starts the process of asking a question
-  std::vector<Stats> run();
+  std::vector<Stats*> run();
 
  private:
   //gets question from the pull of questions
