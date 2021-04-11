@@ -16,9 +16,9 @@ class Question {
   std::string text_of_question;
 
   //Impact of the question on Stats if answer is positive
-  std::vector<Stats> impact_on_stats_positive;
+  std::vector<Stats*> impact_on_stats_positive;
   //Impact of the question on Stats if answer is negative
-  std::vector<Stats> impact_on_stats_negative;
+  std::vector<Stats*> impact_on_stats_negative;
 // Methods:
  public:
   // Constructor
