@@ -11,42 +11,46 @@
 #include "StatsFabric.h"
 #include "QuestionFabric.h"
 #include "Turn.h"
+#include "Question.h"
 
 // the instance of a game
+class Question;
+class Stats;
+
 class Game {
 // Friends:
-    friend class Turn;
+  friend class Turn;
+  friend class QuestionPool;
 // Fields:
-public:
+ public:
 
-private:
-    std::vector<Stats> player_stats_;
-    std::vector<Question> question_pool_;
+ private:
+  std::vector<Stats*> player_stats_;
+  QuestionPool* question_pool_;
 // Methods:
-public:
-    //Constructor
-    Game();
+ public:
+  //Constructor
+  Game();
 
-    Game(const std::vector<Stats*>& stat_arg, const std::vector<Question>& question_arg);
-    //Destructor
-    ~Game();
+  Game(const std::vector<Stats*>&, QuestionPool*);
+  //Destructor
+  ~Game();
 
-    //Runs the game
-    void run();
+  //Runs the game
+  static void run();
 
-private:
-    //Starts game tutorial in the start of the game session
-    static void startTutorial();
+ private:
+  //Starts game tutorial in the start of the game session
+  static void startTutorial();
 
-    //Ends the game when player dies
-    void endGame();
+  //Ends the game when player dies
+  static void endGame();
 
-    // processes player input
-    void processInput();
+  // processes player input
+  void processInput();
 
-    // renders the UI
-    void render();
+  // renders the UI
+  void render();
 };
-
 
 #endif //CONSOLE_GAME_GAME_H

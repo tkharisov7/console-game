@@ -8,10 +8,9 @@
 #include "GameMode.h"
 
 int main() {
-    GameMode game_mode;
-    std::pair<std::vector<Stats*>, std::vector<Question>> data = GameMode::setDifficulty(GameMode::readDifficulty());
-    Game current_game(data.first, data.second);
-    current_game.run();
-
-    return 0;
+  GameMode game_mode;
+  std::pair<std::vector<Stats*>, QuestionPool*> data = GameMode::setDifficulty(GameMode::readDifficulty());
+  Game current_game(data.first, data.second);
+  Game::run();
+  return 0;
 }

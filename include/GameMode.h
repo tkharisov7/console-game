@@ -12,11 +12,11 @@
 #include "QuestionFabric.h"
 
 class GameMode {
-public:
-    static int readDifficulty();
-    static std::pair<std::vector<Stats*>, std::vector<Question>> setDifficulty(int);
-private:
-    std::vector<Question> generateQuestionPoolMedium();
-    std::vector<Question> generateQuestionPoolHard();
+ public:
+  static int readDifficulty();
+  static std::pair<std::vector<Stats*>, QuestionPool*> setDifficulty(int);
+ private:
+  QuestionPool* generateQuestionPoolMedium();
+  QuestionPool* generateQuestionPoolHard();
 };
 #endif //CONSOLE_GAME_GAMEMODE_H
