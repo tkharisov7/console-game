@@ -15,7 +15,14 @@ Question::Question(const std::string& name,
                                                                 impact_on_stats_negative(neg),
                                                                 game_stats(arg_game_stats) {}
 
-std::string Question::questionOutput() const {}
+std::string Question::questionOutput() const {
+  return text_of_question;
+}
+
+void Question::printQuestion() const {
+  PrintQuestionCommand* printing = new PrintQuestionCommand(questionOutput(), 80);
+  printing->execute();
+}
 
 OrdinaryQuestion::OrdinaryQuestion(const std::string& arg_text_of_question,
                                    const std::vector<Stats>& arg_impact_on_stats_positive,

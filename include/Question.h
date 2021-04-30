@@ -10,6 +10,7 @@
 #include <vector>
 #include "Stats.h"
 #include <fstream>
+#include "Command.h"
 
 class Game;
 
@@ -33,6 +34,8 @@ class Question {
 
   Question(const std::string&, const std::vector<Stats>&, const std::vector<Stats>&, const std::vector<Stats*>&);
   std::string questionOutput() const;
+
+  void printQuestion() const;
 };
 
 class OrdinaryQuestion : public Question {
