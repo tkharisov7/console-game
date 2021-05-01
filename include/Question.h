@@ -66,7 +66,12 @@ class QuestionPool {
   std::vector<Question> questions_;
   Game* current_game_;
  public:
+  //Constructor.
   QuestionPool(std::string fileName, Game*);
+  //Returns the amount of questions in pool.
+  size_t QuestionAmount();
+  //Returns the copy of question_[ind]
+  Question GetQuestion(const size_t);
 };
 
 #endif //CONSOLE_GAME_QUESTION_H

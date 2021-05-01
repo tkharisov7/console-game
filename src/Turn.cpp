@@ -16,10 +16,15 @@ bool Turn::input() {
 
 std::vector<Stats*> Turn::run() {
   Question q;
+  int count = 0;
   while (true) {
     q = getQuestion();
     if (checker(q))
       break;
+    ++count;
+    if (count > 5) {
+      break;
+    }
   }
   bool answer = processQuestion(q);
   std::vector<Stats> delta = answer ? q.impact_on_stats_positive : q.impact_on_stats_negative;
@@ -35,7 +40,8 @@ std::vector<Stats*> Turn::run() {
 }
 
 Question Turn::getQuestion() {
-  return Question();
+  size_t question_index = (rand() % question_pool_->QuestionAmount());
+  return question_pool_->GetQuestion(question_index);
 }
 
 bool Turn::checker(const Question& q) {
