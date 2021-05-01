@@ -27,9 +27,6 @@ void Game::run() {
     render();
     a->run();
     ++counter;
-    if (IsDead()) {
-      break;
-    }
   }
   endGame(counter);
 }
@@ -50,14 +47,4 @@ void Game::processInput() {
 
 // renders the UI
 void Game::render() {
-}
-
-//Checks whether player died or not.
-bool Game::IsDead() {
-  for (auto x : player_stats_){
-    if (x->points <= 0) {
-      return true;
-    }
-  }
-  return false;
 }

@@ -21,6 +21,7 @@ class Game {
 // Friends:
   friend class Turn;
   friend class QuestionPool;
+  friend class StatsPrintCommand;
 // Fields:
  public:
 

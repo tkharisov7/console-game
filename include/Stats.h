@@ -95,6 +95,7 @@ class CountryStats : public Stats {
   //Methods
   CountryStats();
   CountryStats(int, const std::string&);
+  CountryStats(const Stats& Stats);
 };
 
 #endif //CONSOLE_GAME_STATS_H
