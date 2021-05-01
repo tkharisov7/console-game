@@ -5,7 +5,9 @@
 #include "Question.h"
 #include "Game.h"
 
-Question::Question() : text_of_question("operheioeg ;ojeg oijtori hjrothj iortrmkg ntr;h ;to hjrthrtog;j hgfklj hgflkhj gfkl; roi;j hrtihj;rjgh lfjh;lkfgjh lgkrto;rthj ortj irjo;irtohrji ojfljg h fkfgklh"), impact_on_stats_positive(), impact_on_stats_negative() {}
+Question::Question() : text_of_question("operheioeg ;ojeg oijtori hjrothj iortrmkg ntr;h ;to hjrthrtog;j hgfklj hgflkhj gfkl; roi;j hrtihj;rjgh lfjh;lkfgjh lgkrto;rthj ortj irjo;irtohrji ojfljg h fkfgklh"),
+    impact_on_stats_positive(),
+    impact_on_stats_negative() {}
 
 Question::Question(const std::string& name,
                    const std::vector<Stats>& pos,
