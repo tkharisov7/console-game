@@ -81,3 +81,11 @@ QuestionPool::QuestionPool(std::string file_name, Game* arg_current_game) {
     questions_.emplace_back(s, positive_stats, negative_stats, current_game_->player_stats_);
   }
 }
+
+size_t QuestionPool::QuestionAmount() {
+  return questions_.size();
+}
+
+Question QuestionPool::GetQuestion(const size_t ind) {
+  return questions_[ind];
+}

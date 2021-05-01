@@ -47,13 +47,4 @@ void Game::processInput() {
 
 // renders the UI
 void Game::render() {
-  std::cout << "KEK" << std::endl;
-  StatsPrintCommand* printing = new StatsPrintCommand(this, 80);
-  std::cout << "KEK" << std::endl;
-
-  std::cout << "KEK" << std::endl;
-  printing->execute();
-
-  std::cout << "KEK" << std::endl;
-  delete printing;
 }
