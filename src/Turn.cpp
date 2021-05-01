@@ -35,7 +35,8 @@ std::vector<Stats*> Turn::run() {
 }
 
 Question Turn::getQuestion() {
-  return Question();
+  size_t question_index = (rand() % question_pool_->QuestionAmount());
+  return question_pool_->GetQuestion(question_index);
 }
 
 bool Turn::checker(const Question& q) {

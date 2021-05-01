@@ -51,6 +51,9 @@ class Game {
 
   // renders the UI
   void render();
+
+  //Checks whether player died or not.
+  bool IsDead();
 };
 
 #endif //CONSOLE_GAME_GAME_H
