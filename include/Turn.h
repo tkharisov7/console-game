@@ -24,6 +24,7 @@ class Turn {
   //Constructor
   Turn(const std::vector<Stats*>&, QuestionPool*);
 
+  Turn() = default;
   //starts the process of asking a question
   std::vector<Stats*> run();
 

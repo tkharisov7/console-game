@@ -5,7 +5,8 @@
 
 #include "Game.h"
 #include <iostream>
-
+#include "Turn.h"
+#include "GameMode.h"
 Game::Game() : player_stats_(), question_pool_() {}
 
 Game::Game(const std::vector<Stats*>& stat_arg, QuestionPool* arg_question_pool) {
@@ -20,6 +21,11 @@ Game::~Game() {
 
 void Game::run() {
   startTutorial();
+  auto a = new Turn(player_stats_, question_pool_);
+  while (true) {
+    render();
+    a->run();
+  }
   endGame();
 }
 
@@ -39,5 +45,4 @@ void Game::processInput() {
 
 // renders the UI
 void Game::render() {
-
 }

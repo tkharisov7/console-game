@@ -11,7 +11,6 @@
 #include "Stats.h"
 #include <fstream>
 #include "Command.h"
-
 class Game;
 
 class Question {

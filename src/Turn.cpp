@@ -18,9 +18,8 @@ std::vector<Stats*> Turn::run() {
   Question q;
   while (true) {
     q = getQuestion();
-    if (checker(q)) {
+    if (checker(q))
       break;
-    }
   }
   bool answer = processQuestion(q);
   std::vector<Stats> delta = answer ? q.impact_on_stats_positive : q.impact_on_stats_negative;
@@ -36,7 +35,7 @@ std::vector<Stats*> Turn::run() {
 }
 
 Question Turn::getQuestion() {
-
+  return Question();
 }
 
 bool Turn::checker(const Question& q) {
@@ -72,7 +71,7 @@ bool Turn::checker(const Question& q) {
 }
 
 bool Turn::processQuestion(const Question& q) {
-  std::cout << q.text_of_question << '\n';
+  q.printQuestion();
   bool answer = input();
   return answer;
 }

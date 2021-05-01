@@ -5,7 +5,7 @@
 #include "Question.h"
 #include "Game.h"
 
-Question::Question() : text_of_question(), impact_on_stats_positive(), impact_on_stats_negative() {}
+Question::Question() : text_of_question("operheioeg ;ojeg oijtori hjrothj iortrmkg ntr;h ;to hjrthrtog;j hgfklj hgflkhj gfkl; roi;j hrtihj;rjgh lfjh;lkfgjh lgkrto;rthj ortj irjo;irtohrji ojfljg h fkfgklh"), impact_on_stats_positive(), impact_on_stats_negative() {}
 
 Question::Question(const std::string& name,
                    const std::vector<Stats>& pos,
@@ -20,8 +20,9 @@ std::string Question::questionOutput() const {
 }
 
 void Question::printQuestion() const {
-  PrintQuestionCommand* printing = new PrintQuestionCommand(questionOutput(), 80);
+  SimpleTextPrintCommand* printing = new SimpleTextPrintCommand(questionOutput(), 80);
   printing->execute();
+  delete printing;
 }
 
 OrdinaryQuestion::OrdinaryQuestion(const std::string& arg_text_of_question,

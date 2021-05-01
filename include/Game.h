@@ -37,14 +37,14 @@ class Game {
   ~Game();
 
   //Runs the game
-  static void run();
+  void run();
 
  private:
   //Starts game tutorial in the start of the game session
-  static void startTutorial();
+  void startTutorial();
 
   //Ends the game when player dies
-  static void endGame();
+  void endGame();
 
   // processes player input
   void processInput();
