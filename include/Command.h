@@ -7,23 +7,55 @@
 
 #include <string>
 #include <iostream>
-#include <vector>
 
 
 class Command {
 public:
-  virtual void execute() = 0;
+  virtual void execute();
 };
 
-class SimpleTextPrintCommand: public Command {
+class PrintQuestionCommand: public Command {
 private:
   std::string text_;
   size_t width_;
 
 public:
 
-    SimpleTextPrintCommand(std::string text, size_t width) : Command(), text_(text), width_(width) {}
+    PrintQuestionCommand(std::string text, size_t width) : Command(), text_(text), width_(width) {}
 
-  void execute() override;
+  void execute() override {
+    for (int i = 0; i < width_; ++i) {
+      std::cout << "=";
+    }
+    std::cout << "\n\n";
+    std::vector<std::string> parsed_text;
+    std::string buffer;
+    for (int i = 0; i < text_.size(); ++i) {
+      if (text_[i] == ' ') {
+        parsed_text.push_back(buffer);
+        buffer = "";
+       } else {
+        buffer += text_[i];
+        std::cout << "\nlol";
+      }
+    }
+    parsed_text.push_back(buffer);
+
+    buffer = "";
+    for (auto t : parsed_text) {
+      if ((buffer + t).size() > 80) {
+        std::cout << buffer << '\n';
+        buffer = t;
+      } else {
+        buffer += " " + t;
+      }
+    }
+    std::cout << buffer << '\n';
+
+    for (int i = 0; i < width_; ++i) {
+      std::cout << "=";
+    }
+  }
 };
+
 #endif //CONSOLE_GAME_COMMAND_H

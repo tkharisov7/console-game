@@ -44,7 +44,7 @@ class Game {
   void startTutorial();
 
   //Ends the game when player dies
-  void endGame();
+  void endGame(const size_t);
 
   // processes player input
   void processInput();

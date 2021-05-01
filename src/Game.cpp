@@ -22,11 +22,13 @@ Game::~Game() {
 void Game::run() {
   startTutorial();
   auto a = new Turn(player_stats_, question_pool_);
+  size_t counter = 0;
   while (true) {
     render();
     a->run();
+    ++counter;
   }
-  endGame();
+  endGame(counter);
 }
 
 void Game::startTutorial() {
@@ -34,8 +36,8 @@ void Game::startTutorial() {
 }
 
 //Ends the game when player dies
-void Game::endGame() {
-  std::cout << "END of GAME\n";
+void Game::endGame(const size_t years_amount) {
+  std::cout << "END of GAME\n" << "Congratulations! You have reined for " << years_amount << " years!";
 }
 
 // processes player input
