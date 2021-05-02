@@ -45,7 +45,7 @@ void Turn::run() {
     render();
     answer = processQuestion(q);
   }
-std::vector<Stats> delta = answer ? q.impact_on_stats_positive : q.impact_on_stats_negative;
+  std::vector<Stats> delta = answer == 'y' ? q.impact_on_stats_positive : q.impact_on_stats_negative;
   std::vector<Stats*> result = current_stats_;
   for (Stats* a : result) {
     for (const Stats& b : delta) {
