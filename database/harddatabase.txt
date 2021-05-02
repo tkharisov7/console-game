@@ -84,3 +84,12 @@ Money -2
 2
 Niue -3
 Money +1
+Secretary of State Al-Maksim: "The Fiji wants to lower a toll fee."
+4
+Fiji +3
+Mayotte -3
+Niue -3
+Money -2
+2
+Fiji -3
+Money +1

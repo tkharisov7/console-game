@@ -20,7 +20,7 @@ std::string StatsOutputDecorator::statsOutput() const {
 }
 
 std::string ArmyStatsOutputDecorator::statsOutput() const {
-  return "\U00002694 " + StatsOutputDecorator::statsOutput() + ": " + std::to_string(stats_->points);  // crossing swords
+  return "\U00002694\U00002694 " + StatsOutputDecorator::statsOutput() + ": " + std::to_string(stats_->points);  // crossing swords
 }
 
 std::string MoneyStatsOutputDecorator::statsOutput() const {
