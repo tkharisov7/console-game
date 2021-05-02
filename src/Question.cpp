@@ -53,7 +53,6 @@ QuestionPool::QuestionPool(const std::vector<std::string>& vec_file_name) {
     while (!a.eof()) {
       std::string s;
       std::getline(a, s);
-      std::cout << s << std::endl;
       if (s.size() < 10) {
         break;
       }
@@ -65,7 +64,6 @@ QuestionPool::QuestionPool(const std::vector<std::string>& vec_file_name) {
         std::string name;
         int delta;
         a >> name >> delta;
-        std::cout << name << ' ' << delta << "JOJ\n";
         positive_stats.emplace_back(delta, name);
       }
       a >> negative_n;
@@ -73,7 +71,6 @@ QuestionPool::QuestionPool(const std::vector<std::string>& vec_file_name) {
         std::string name;
         int delta;
         a >> name >> delta;
-        std::cout << name << ' ' << delta << "JOJ2\n";
         negative_stats.emplace_back(delta, name);
       }
       std::string help;

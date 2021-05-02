@@ -4,6 +4,7 @@
 
 #include "GameMode.h"
 int GameMode::readDifficulty() {
+  system("clear");
   std::cout << "please, choose difficulty:\n1 - easy\n2 - hard\n";
   int difficulty;
   std::cin >> difficulty;

@@ -1,0 +1,40 @@
+Mayotte wants to declare a war against you. General Ramazan wants to lead an army, but Secretary of State Al-Maksim wants to make peace. Would you agree with general?
+3
+Mayotte -3
+Army +5
+People -2
+4
+Mayotte +2
+Army -2
+People +2
+Money -2
+Pope of Fiji: "We want to organise the pilgrimage to tomb of Saint Eduardo."
+3
+Fiji +2
+Church +2
+Money -3
+4
+Fiji -3
+Church -3
+Army +2
+Money +1
+Secretary of State Al-Maksim: "Should we build embassies in neighbourhood countries? It is a good way to avoid wars."
+4
+Fiji +2
+Mayotte +2
+Niue +2
+Money -5
+2
+Money +2
+People -3
+General Ramazan: "The Queen of Niue has given you 40 books. You need to build a library!"
+4
+Niue +3
+Army +1
+Money -5
+Church +1
+4
+Niue -2
+Army -1
+Money +3
+Church -1

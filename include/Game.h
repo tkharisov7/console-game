@@ -47,12 +47,6 @@ class Game {
   //Ends the game when player dies
   void endGame(const size_t);
 
-  // processes player input
-  void processInput();
-
-  // renders the UI
-  void render();
-
   //Checks whether player died or not.
   std::pair<bool, std::string> IsDead();
 };
