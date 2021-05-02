@@ -30,9 +30,11 @@ void Turn::run() {
   system("clear");
   render();
   Question q;
+  size_t cnt = 0;
   while (true) {
     q = getQuestion();
-    if (checker(q))
+    ++cnt;
+    if (checker(q) || cnt >= 5)
       break;
   }
   char answer = processQuestion(q);

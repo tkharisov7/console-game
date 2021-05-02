@@ -28,10 +28,12 @@ void Game::run() {
   auto a = new Turn(player_stats_, question_pool_);
   size_t counter = 0;
   while (true) {
-    render();
-    a->run();
-    ++counter;
     system("clear");
+    a->run();
+    if (IsDead().first) {
+      break;
+    }
+    ++counter;
   }
   endGame(counter);
 }
@@ -58,14 +60,15 @@ void Game::endGame(const size_t years_amount) {
   std::this_thread::sleep_for(std::chrono::milliseconds(2000));
 }
 
-// processes player input
-void Game::processInput() {
-
-}
-
-// renders the UI
-void Game::render() {
-  StatsPrintCommand* printing = new StatsPrintCommand(this, 80);
-  printing->execute();
-  delete printing;
+//Checks whether player died or not.
+std::pair<bool, std::string> Game::IsDead() {
+  for (auto x : player_stats_) {
+    auto ptr = dynamic_cast<CountryStats*>(x);
+    if (x->points <= 0) {
+      std::string variant_string = ptr == nullptr ?
+          "of lack of " + x->name_of_stats : ptr->name_of_country + "fucked you";
+      return {true, variant_string};
+    }
+  }
+  return {false, ""};
 }

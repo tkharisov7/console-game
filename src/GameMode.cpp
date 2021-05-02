@@ -15,7 +15,9 @@ QuestionPool* GameMode::generateQuestionPoolMedium() {
   return new QuestionPool({"../database/ordinarydatabase.txt"});
 }
 
-QuestionPool* GameMode::generateQuestionPoolHard() {}
+QuestionPool* GameMode::generateQuestionPoolHard() {
+  return new QuestionPool({"../database/ordinarydatabase.txt", "../database/harddatabase.txt"});
+}
 
 std::pair<std::vector<Stats*>, QuestionPool*> GameMode::setDifficulty(int x) {
   OrdinaryStatsCreator ordinary_stats_creator;
