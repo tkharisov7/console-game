@@ -31,7 +31,7 @@ void SimpleTextPrintCommand::execute()  {
       for (int j = 0; j < buffer.size(); ++j) {
         std::cout << buffer[j];
         std::cout.flush();
-        std::this_thread::sleep_for(std::chrono::milliseconds(70));
+        std::this_thread::sleep_for(std::chrono::milliseconds(35));
       }
       std::cout << '\n';
       buffer = t;
@@ -43,7 +43,7 @@ void SimpleTextPrintCommand::execute()  {
   for (int i = 0; i < buffer.size(); ++i) {
     std::cout << buffer[i];
     std::cout.flush();
-    std::this_thread::sleep_for(std::chrono::milliseconds(70));
+    std::this_thread::sleep_for(std::chrono::milliseconds(35));
   }
 
   std::cout << "\n\n";

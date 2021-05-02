@@ -40,7 +40,7 @@ void Game::run() {
 
 void Game::startTutorial() {
   system("clear");
-  std::string s = "Greetings, my Lord! You are king of small country in the middle of Earth!\n"
+  std::string s = "Greetings, my Lord! You are king of small country in the middle of Earth!       "
                   "Your mission is to save your country as long as possible!";
   auto comm = new SimpleTextPrintCommand(s, 80);
   comm->execute();
