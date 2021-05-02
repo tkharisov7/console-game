@@ -38,3 +38,49 @@ Niue -2
 Army -1
 Money +3
 Church -1
+General Ramazan: "Mayotte wants our army to help them in conflict with the Niue. They will pay highly."
+4
+Money +4
+Army -3
+Mayotte +3
+Niue -5
+4
+Money -1
+People +2
+Mayotte -3
+Niue +2
+Secretary of State Al-Maksim: "Our soldiers did a little more work. They have robbed all lands of Mayotte and Niue. Should they continue?"
+3
+Army +2
+Mayotte -3
+Niue -3
+3
+People +3
+Money -2
+Army -2
+General Ramazan: "Fiji are attacking us from the Mountains! Should we send an army?"
+1
+Army -2
+1
+People -3
+Secretary of State Al-Maksim: "Do you want to marry a Princess of Mayotte?"
+7
+Army +1
+People +1
+Church +1
+Money -1
+Mayotte +3
+Fiji -2
+Niue -2
+4
+Church -2
+Mayotte -3
+Fiji +1
+Niue +1
+Secretary of State Al-Maksim: "King of Niue want to meet with you. Should we get ready for his visit?"
+2
+Niue +3
+Money -2
+2
+Niue -3
+Money +1

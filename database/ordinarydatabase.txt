@@ -31,3 +31,77 @@ Chicken runs into your castle: "In the Southern part of country people are doing
 Army +2
 1
 Church +2
+Rogue Artem: "We should set up a curfew. Streets of the Capital are too dangerous at nights."
+3
+People -2
+Army +2
+Money -4
+2
+Money +2
+People -3
+Judge Pshimaf: "The earthquake has ruined the most part of the Capital. Should city guards help the suffered? If not we will prevent looting."
+2
+People +2
+Money -3
+3
+People -3
+Money +2
+Army -1
+Mine-worker Jake: "Mine-workers reject to go into the shaft. Should we give them the increase in payment?"
+2
+People +2
+Money -4
+2
+People -2
+Money +2
+General Ramazan: "Soldiers have too small payment. Should we increase it?"
+2
+Army +3
+Money -3
+2
+Army -2
+Money +1
+Sir Jotoro: "Senior, we have been attacked! Tramps has filled the streets! Should we get rid of them?"
+3
+Church -2
+People -1
+Army +2
+3
+Church +1
+People +2
+Army -2
+Pope Konstantin V: "We need to change the flag! I offer you a white cross on red background."
+1
+Church +3
+2
+People -2
+Army -2
+General Ramazan: "Should we build some fortifications around the Capital? It's expensive, but it worth it."
+2
+Money -4
+Army +4
+1
+Army -1
+Sir Jotoro: "It is your birthday, Senior. Would you like to arrange a feast?"
+4
+Money -4
+People +1
+Army +1
+Church +1
+1
+Money +2
+Pope Konstantin V: "We want to announce a new taxes for Church. You will be payed as well, of course."
+3
+Church +3
+Money +3
+People -4
+1
+Church -2
+Mine-worker Jake: "Shafts are full of gold, Senior! Should we divide it for all county?"
+4
+Money +1
+Church +1
+People +1
+Army +1
+1
+Money +4
