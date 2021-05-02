@@ -70,7 +70,7 @@ class QuestionPool {
   QuestionPool(std::string fileName, Game*);
   //Returns the amount of questions in pool.
   size_t QuestionAmount();
-  //Returns the copy of question_[ind]
+  //Returns the copy of question_[ind].
   Question GetQuestion(const size_t);
 };
 

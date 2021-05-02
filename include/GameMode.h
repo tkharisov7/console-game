@@ -16,7 +16,7 @@ class GameMode {
   static int readDifficulty();
   static std::pair<std::vector<Stats*>, QuestionPool*> setDifficulty(int);
  private:
-  QuestionPool* generateQuestionPoolMedium();
-  QuestionPool* generateQuestionPoolHard();
+  static QuestionPool* generateQuestionPoolMedium();
+  static QuestionPool* generateQuestionPoolHard();
 };
 #endif //CONSOLE_GAME_GAMEMODE_H
