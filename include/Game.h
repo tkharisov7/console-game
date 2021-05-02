@@ -54,7 +54,7 @@ class Game {
   void render();
 
   //Checks whether player died or not.
-  bool IsDead();
+  std::pair<bool, std::string> IsDead();
 };
 
 #endif //CONSOLE_GAME_GAME_H

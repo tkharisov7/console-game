@@ -7,6 +7,7 @@
 #include <iostream>
 #include "Turn.h"
 #include "GameMode.h"
+#include <thread>
 Game::Game() : player_stats_(), question_pool_() {}
 
 Game::Game(const std::vector<Stats*>& stat_arg, QuestionPool* arg_question_pool) {
@@ -42,7 +43,15 @@ void Game::startTutorial() {
 
 //Ends the game when player dies
 void Game::endGame(const size_t years_amount) {
-  std::cout << "END of GAME\n" << "Congratulations! You have reined for " << years_amount << " years!";
+  std::string s = "END of GAME\n";
+  s += "You have died because " + IsDead().second + '\n';
+  s += "Congratulations! You have reined for " + std::to_string(years_amount ) + " years!\n";
+  for (int i = 0; i < s.size(); ++i) {
+    std::cout << s[i];
+    std::cout.flush();
+    std::this_thread::sleep_for(std::chrono::milliseconds(70));
+  }
+  std::this_thread::sleep_for(std::chrono::milliseconds(2000));
 }
 
 // processes player input

@@ -17,6 +17,9 @@ char Turn::input() {
   std::cout << "Your response (y/n)\n";
   std::string c;
   std::getline(std::cin, c);
+  if (c == "") {
+    std::getline(std::cin, c);
+  }
   if (c.size() != 1) {
     return 'r';
   }

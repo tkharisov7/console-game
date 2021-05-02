@@ -5,6 +5,7 @@
 #include "Command.h"
 #include <vector>
 #include "Game.h"
+#include <thread>
 
 void SimpleTextPrintCommand::execute()  {
   for (int i = 0; i < width_; ++i) {
@@ -27,13 +28,25 @@ void SimpleTextPrintCommand::execute()  {
   for (int i = 1; i < parsed_text.size(); ++i) {
     auto t = parsed_text[i];
     if ((buffer + t).size() > width_) {
-      std::cout << buffer << '\n';
+      for (int j = 0; j < buffer.size(); ++j) {
+        std::cout << buffer[j];
+        std::cout.flush();
+        std::this_thread::sleep_for(std::chrono::milliseconds(70));
+      }
+      std::cout << '\n';
       buffer = t;
     } else {
       buffer += " " + t;
     }
   }
-  std::cout << buffer << "\n\n";
+
+  for (int i = 0; i < buffer.size(); ++i) {
+    std::cout << buffer[i];
+    std::cout.flush();
+    std::this_thread::sleep_for(std::chrono::milliseconds(70));
+  }
+
+  std::cout << "\n\n";
 
   for (int i = 0; i < width_; ++i) {
     std::cout << "=";
@@ -65,9 +78,6 @@ void StatsPrintCommand::execute() {
     auto tmp = dynamic_cast<CountryStats*>(i);
     if (tmp == nullptr) {
       continue;
-    }
-    if (tmp->name_of_country == "") {
-      std::cout << "ZHOPA" << '\n';
     }
     if (tmp->name_of_country == "Fiji") {
       std::cout << FijiStatsOutputDecorator(i).statsOutput() << '\n';
