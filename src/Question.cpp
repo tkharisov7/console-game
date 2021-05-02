@@ -5,7 +5,7 @@
 #include "Question.h"
 #include "Game.h"
 
-Question::Question() : text_of_question("operheioeg ;ojeg oijtori hjrothj iortrmkg ntr;h ;to hjrthrtog;j hgfklj hgflkhj gfkl; roi;j hrtihj;rjgh lfjh;lkfgjh lgkrto;rthj ortj irjo;irtohrji ojfljg h fkfgklh"),
+Question::Question() : text_of_question("Empty question."),
     impact_on_stats_positive(),
     impact_on_stats_negative() {}
 
@@ -70,14 +70,14 @@ QuestionPool::QuestionPool(std::string file_name, Game* arg_current_game) {
     for (int i = 0; i < positive_n; ++i) {
       std::string name;
       int delta;
-      a >> delta >> name;
+      a >> name >> delta;
       positive_stats.emplace_back(delta, name);
     }
     a >> negative_n;
     for (int i = 0; i < negative_n; ++i) {
       std::string name;
       int delta;
-      a >> delta >> name;
+      a >> name >> delta;
       negative_stats.emplace_back(delta, name);
     }
     questions_.emplace_back(s, positive_stats, negative_stats, current_game_->player_stats_);

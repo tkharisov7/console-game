@@ -1,0 +1,11 @@
+Should we end military conscription for one year?$
+4
+People +2
+Church +1
+Army -3
+Money -1
+4
+People -2
+Church -1
+Army +2
+Money +2
