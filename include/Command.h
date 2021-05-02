@@ -9,6 +9,7 @@
 #include <iostream>
 
 class Game;
+class Turn;
 
 class Command {
 public:
@@ -29,10 +30,10 @@ public:
 
 class StatsPrintCommand: public Command {
 private:
-  Game* game_;
+  Turn* turn_;
   size_t width_;
  public:
-  StatsPrintCommand(Game* current_game, size_t num): game_(current_game), width_(num) {}
+  StatsPrintCommand(Turn* current_turn, size_t num): turn_(current_turn), width_(num) {}
 
   void execute() override;
 

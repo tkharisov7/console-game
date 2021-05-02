@@ -11,6 +11,8 @@
 #include <vector>
 
 class Turn {
+
+  friend class StatsPrintCommand;
 // Fields:
  public:
 
@@ -19,6 +21,7 @@ class Turn {
   //we need this class to finish the game correctly if we lose
   std::vector<Stats*> current_stats_;
   QuestionPool* question_pool_;
+  int highest_point{15};
 // Methods:
  public:
   //Constructor
@@ -26,7 +29,7 @@ class Turn {
 
   Turn() = default;
   //starts the process of asking a question
-  std::vector<Stats*> run();
+  void run();
 
  private:
   //gets question from the pull of questions
@@ -36,9 +39,10 @@ class Turn {
   bool checker(const Question&);
 
   // takes user's answer
-  bool input();
+  char input();
 
+  void render();
   //asks the question and gets an answer
-  bool processQuestion(const Question&);
+  char processQuestion(const Question&);
 };
 #endif //CONSOLE_GAME_TURN_H

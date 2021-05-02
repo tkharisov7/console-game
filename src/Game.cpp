@@ -16,6 +16,10 @@ Game::Game(const std::vector<Stats*>& stat_arg, QuestionPool* arg_question_pool)
   question_pool_ = arg_question_pool;
 }
 Game::~Game() {
+  for (auto i : player_stats_) {
+    delete i;
+  }
+  delete question_pool_;
   player_stats_.clear();
 }
 

@@ -11,7 +11,7 @@ int GameMode::readDifficulty() {
 }
 
 QuestionPool* GameMode::generateQuestionPoolMedium() {
-  return new QuestionPool("ordinarydatabase.txt", nullptr);
+  return new QuestionPool({"../database/ordinarydatabase.txt"});
 }
 
 QuestionPool* GameMode::generateQuestionPoolHard() {}

@@ -62,12 +62,13 @@ class CountryQuestion : public Question {
 };
 
 class QuestionPool {
+  friend class Game;
  private:
   std::vector<Question> questions_;
   Game* current_game_;
  public:
   //Constructor.
-  QuestionPool(std::string fileName, Game*);
+  QuestionPool(const std::vector<std::string>&);
   //Returns the amount of questions in pool.
   size_t QuestionAmount();
   //Returns the copy of question_[ind].

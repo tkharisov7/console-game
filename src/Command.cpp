@@ -46,7 +46,7 @@ void StatsPrintCommand::execute() {
     std::cout << "=";
   }
   std::cout << '\n';
-  for (auto i : game_->player_stats_) {
+  for (auto i : turn_->current_stats_) {
     if (i->name_of_stats == "People") {
       std::cout << PeopleStatsOutputDecorator(i).statsOutput() << '\n';
     }

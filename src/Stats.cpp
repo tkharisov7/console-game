@@ -20,31 +20,31 @@ std::string StatsOutputDecorator::statsOutput() const {
 }
 
 std::string ArmyStatsOutputDecorator::statsOutput() const {
-  return "\U00002694" + StatsOutputDecorator::statsOutput() + ": " + std::to_string(stats_->points);  // crossing swords
+  return "\U00002694 " + StatsOutputDecorator::statsOutput() + ": " + std::to_string(stats_->points);  // crossing swords
 }
 
 std::string MoneyStatsOutputDecorator::statsOutput() const {
-  return "\U0001F4B0" + StatsOutputDecorator::statsOutput() + ": " + std::to_string(stats_->points); // moneybag
+  return "\U0001F4B0 " + StatsOutputDecorator::statsOutput() + ": " + std::to_string(stats_->points); // moneybag
 }
 
 std::string PeopleStatsOutputDecorator::statsOutput() const {
-  return "\U0001F46A" + StatsOutputDecorator::statsOutput() + ": " + std::to_string(stats_->points); // family
+  return "\U0001F46A " + StatsOutputDecorator::statsOutput() + ": " + std::to_string(stats_->points); // family
 }
 
 std::string ChurchStatsOutputDecorator::statsOutput() const {
-  return "\U000026EA" + StatsOutputDecorator::statsOutput() + ": " + std::to_string(stats_->points);  // church
+  return "\U000026EA " + StatsOutputDecorator::statsOutput() + ": " + std::to_string(stats_->points);  // church
 }
 
 std::string FijiStatsOutputDecorator::statsOutput() const {
-  return "\U0001F1EB\U0001F1EF" + StatsOutputDecorator::statsOutput() + ": " + std::to_string(stats_->points); // FijiFlag
+  return "\U0001F1EB\U0001F1EF " + StatsOutputDecorator::statsOutput() + ": " + std::to_string(stats_->points); // FijiFlag
 }
 
 std::string NiueStatsOutputDecorator::statsOutput() const {
-  return "\U0001F1F3\U0001F1FA" + StatsOutputDecorator::statsOutput() + ": " + std::to_string(stats_->points); // NiueFlag
+  return "\U0001F1F3\U0001F1FA " + StatsOutputDecorator::statsOutput() + ": " + std::to_string(stats_->points); // NiueFlag
 }
 
 std::string MayotteStatsOutputDecorator::statsOutput() const {
-  return "\U0001F1FE\U0001F1F9" + StatsOutputDecorator::statsOutput() + ": " + std::to_string(stats_->points); // MayotteFlag
+  return "\U0001F1FE\U0001F1F9 " + StatsOutputDecorator::statsOutput() + ": " + std::to_string(stats_->points); // MayotteFlag
 }
 
 OrdinaryStats::OrdinaryStats() : Stats() {}
