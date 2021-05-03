@@ -21,6 +21,7 @@ class Game {
 // Friends:
   friend class Turn;
   friend class QuestionPool;
+  friend class StatsPrintCommand;
 // Fields:
  public:
 
@@ -37,20 +38,17 @@ class Game {
   ~Game();
 
   //Runs the game
-  static void run();
+  void run();
 
  private:
   //Starts game tutorial in the start of the game session
-  static void startTutorial();
+  void startTutorial();
 
   //Ends the game when player dies
-  static void endGame();
+  void endGame(const size_t);
 
-  // processes player input
-  void processInput();
-
-  // renders the UI
-  void render();
+  //Checks whether player died or not.
+  std::pair<bool, std::string> IsDead();
 };
 
 #endif //CONSOLE_GAME_GAME_H

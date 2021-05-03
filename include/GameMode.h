@@ -5,9 +5,11 @@
 #ifndef CONSOLE_GAME_GAMEMODE_H
 #define CONSOLE_GAME_GAMEMODE_H
 
+#include <chrono>
+#include <fstream>
+#include <thread>
 #include <vector>
 #include <iostream>
-#include <fstream>
 #include "StatsFabric.h"
 #include "QuestionFabric.h"
 
@@ -16,7 +18,7 @@ class GameMode {
   static int readDifficulty();
   static std::pair<std::vector<Stats*>, QuestionPool*> setDifficulty(int);
  private:
-  QuestionPool* generateQuestionPoolMedium();
-  QuestionPool* generateQuestionPoolHard();
+  static QuestionPool* generateQuestionPoolMedium();
+  static QuestionPool* generateQuestionPoolHard();
 };
 #endif //CONSOLE_GAME_GAMEMODE_H

@@ -1,0 +1,95 @@
+Mayotte wants to declare a war against you. General Ramazan wants to lead an army, but Secretary of State Al-Maksim wants to make peace. Would you agree with general?
+3
+Mayotte -3
+Army +5
+People -2
+4
+Mayotte +2
+Army -2
+People +2
+Money -2
+Pope of Fiji: "We want to organise the pilgrimage to tomb of Saint Eduardo."
+3
+Fiji +2
+Church +2
+Money -3
+4
+Fiji -3
+Church -3
+Army +2
+Money +1
+Secretary of State Al-Maksim: "Should we build embassies in neighbourhood countries? It is a good way to avoid wars."
+4
+Fiji +2
+Mayotte +2
+Niue +2
+Money -5
+2
+Money +2
+People -3
+General Ramazan: "The Queen of Niue has given you 40 books. You need to build a library!"
+4
+Niue +3
+Army +1
+Money -5
+Church +1
+4
+Niue -2
+Army -1
+Money +3
+Church -1
+General Ramazan: "Mayotte wants our army to help them in conflict with the Niue. They will pay highly."
+4
+Money +4
+Army -3
+Mayotte +3
+Niue -5
+4
+Money -1
+People +2
+Mayotte -3
+Niue +2
+Secretary of State Al-Maksim: "Our soldiers did a little more work. They have robbed all lands of Mayotte and Niue. Should they continue?"
+3
+Army +2
+Mayotte -3
+Niue -3
+3
+People +3
+Money -2
+Army -2
+General Ramazan: "Fiji are attacking us from the Mountains! Should we send an army?"
+1
+Army -2
+1
+People -3
+Secretary of State Al-Maksim: "Do you want to marry a Princess of Mayotte?"
+7
+Army +1
+People +1
+Church +1
+Money -1
+Mayotte +3
+Fiji -2
+Niue -2
+4
+Church -2
+Mayotte -3
+Fiji +1
+Niue +1
+Secretary of State Al-Maksim: "King of Niue want to meet with you. Should we get ready for his visit?"
+2
+Niue +3
+Money -2
+2
+Niue -3
+Money +1
+Secretary of State Al-Maksim: "The Fiji wants to lower a toll fee."
+4
+Fiji +3
+Mayotte -3
+Niue -3
+Money -2
+2
+Fiji -3
+Money +1

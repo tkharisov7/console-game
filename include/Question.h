@@ -10,6 +10,7 @@
 #include <vector>
 #include "Stats.h"
 #include <fstream>
+#include "Command.h"
 
 class Game;
 
@@ -23,7 +24,7 @@ class Question {
   //Impact of the question on Stats if answer is negative
   std::vector<Stats> impact_on_stats_negative;
   //Game stats - current stats from the game
-  std::vector<Stats*> game_stats;
+  //std::vector<Stats*> game_stats;
 // Methods:
  public:
   // Constructor
@@ -31,8 +32,10 @@ class Question {
   // Destructor
   ~Question() = default;
 
-  Question(const std::string&, const std::vector<Stats>&, const std::vector<Stats>&, const std::vector<Stats*>&);
+  Question(const std::string&, const std::vector<Stats>&, const std::vector<Stats>&);
   std::string questionOutput() const;
+
+  void printQuestion() const;
 };
 
 class OrdinaryQuestion : public Question {
@@ -42,8 +45,7 @@ class OrdinaryQuestion : public Question {
   //Text of question and Stats constructor
   OrdinaryQuestion(const std::string&,
                    const std::vector<Stats>&,
-                   const std::vector<Stats>&,
-                   const std::vector<Stats*>&);
+                   const std::vector<Stats>&);
 
 };
 
@@ -54,16 +56,20 @@ class CountryQuestion : public Question {
   CountryQuestion(const std::string&,
                   const std::string&,
                   const std::vector<Stats>&,
-                  const std::vector<Stats>&,
-                  const std::vector<Stats*>&);
+                  const std::vector<Stats>&);
 };
 
 class QuestionPool {
+  friend class Game;
  private:
   std::vector<Question> questions_;
-  Game* current_game_;
  public:
-  QuestionPool(std::string fileName, Game*);
+  //Constructor.
+  QuestionPool(const std::vector<std::string>&);
+  //Returns the amount of questions in pool.
+  size_t QuestionAmount();
+  //Returns the copy of question_[ind].
+  Question GetQuestion(const size_t);
 };
 
 #endif //CONSOLE_GAME_QUESTION_H

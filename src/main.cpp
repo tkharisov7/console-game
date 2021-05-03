@@ -11,6 +11,6 @@ int main() {
   GameMode game_mode;
   std::pair<std::vector<Stats*>, QuestionPool*> data = GameMode::setDifficulty(GameMode::readDifficulty());
   Game current_game(data.first, data.second);
-  Game::run();
+  current_game.run();
   return 0;
 }
