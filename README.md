@@ -28,11 +28,11 @@ cmake .
 ```
 make
 ```
-Now go to build directory:
+Now go to bin directory:
 ```
-cd build
+cd bin
 ```
-And launch run the executable:
+And launch the executable:
 ```
 ./console-game
 ```
