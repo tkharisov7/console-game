@@ -30,13 +30,7 @@ void Turn::run() {
   system("clear");
   render();
   Question q;
-  size_t cnt = 0;
-  while (true) {
-    q = getQuestion();
-    ++cnt;
-    if (checker(q) || cnt >= 5)
-      break;
-  }
+  q = getQuestion();
   char answer = processQuestion(q);
   while (answer != 'y' && answer != 'n') {
     std::cout << "INCORRECT RESPONSE!\n";
@@ -65,39 +59,6 @@ void Turn::run() {
 Question Turn::getQuestion() {
   size_t ind = (rnd() % question_pool_->QuestionAmount());
   return question_pool_->GetQuestion(ind);
-}
-
-bool Turn::checker(const Question& q) {
-  return true;
-  int counter = 0;
-  std::vector<Stats*> result = current_stats_;
-  for (const Stats& a : q.impact_on_stats_positive) {
-    for (Stats* b : result) {
-      if (a.name_of_stats == b->name_of_stats) {
-        b->points += a.points;
-      }
-    }
-  }
-  for (Stats* a : result)
-    if (a->points <= 0) {
-      counter++;
-      break;
-    }
-  result = current_stats_;
-  for (const Stats& a : q.impact_on_stats_negative) {
-    for (Stats* b : result) {
-      if (a.name_of_stats == b->name_of_stats) {
-        b->points += a.points;
-      }
-    }
-  }
-  for (Stats* a : result)
-    if (a->points <= 0) {
-      counter++;
-      break;
-    }
-
-  return counter != 2;
 }
 
 void Turn::render() {

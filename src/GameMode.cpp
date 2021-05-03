@@ -5,10 +5,17 @@
 #include "GameMode.h"
 int GameMode::readDifficulty() {
   system("clear");
+  std::string difficulty;
   std::cout << "please, choose difficulty:\n1 - easy\n2 - hard\n";
-  int difficulty;
-  std::cin >> difficulty;
-  return difficulty;
+  std::getline(std::cin, difficulty);
+  while (difficulty != "1" && difficulty != "2") {
+    std::cout << "INCORRECT RESPONSE! Please, try again.\n";
+    std::this_thread::sleep_for(std::chrono::milliseconds(2000));
+    system("clear");
+    std::cout << "please, choose difficulty:\n1 - easy\n2 - hard\n";
+    std::getline(std::cin, difficulty);
+  }
+  return difficulty == "1" ? 1 : 2;
 }
 
 QuestionPool* GameMode::generateQuestionPoolMedium() {
