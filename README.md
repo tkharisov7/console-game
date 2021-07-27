@@ -1,7 +1,7 @@
 # console-game
 ## Description
 
-Simple game using C++.
+Simple game written on C++ and using various software design patterns inside source code.
 
 It is based on Reigns game.
 
@@ -36,3 +36,5 @@ And launch run the executable:
 ```
 ./console-game
 ```
+## Project's UML
+![console-game UML](https://github.com/tkharisov7/console-game/blob/master/console-game.png?raw=true)
